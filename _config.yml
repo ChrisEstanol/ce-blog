@@ -1,8 +1,8 @@
 # Site settings
-title: Clean Blog
+title: Christophe Estanol - Blog
 email: your-email@yourdomain.com
 description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: "/ce-blog"
+baseurl: ""
 url: "http://chrisestanol.com"
 twitter_username: SBootstrap
 github_username:  davidtmiller
