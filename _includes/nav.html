@@ -1,20 +1,16 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    </div>
-    <div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="{{ site.baseurl }}/">Home</a>
-        </li>
-        {% for page in site.pages %}{% if page.title %}
-        <li>
-          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
-        {% endif %}{% endfor %}
-      </ul>
+<header class="main-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <a class="brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </div>
+      <div class="col-xs-8 text-right">
+        <ul class="nav">
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/about">About</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-</nav>
+</header>
