@@ -1,11 +1,11 @@
 # Site settings
-title: Christophe Estanol - Blog
+title: Christophe Estanol
 email: your-email@yourdomain.com
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
 url: "http://chrisestanol.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
+twitter_username: chrisestanol
+github_username:  chrisestanol
 facebook_username:  IronSummitMedia
 
 # Build settings
