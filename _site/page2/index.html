@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Write your site description here. It will be used as your sites meta description as well!">
 
-    <title>Christophe Estanol - Blog</title>
+    <title>Christophe Estanol</title>
 
     <link rel="canonical" href="http://chrisestanol.com/page2/">
 
@@ -17,6 +17,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="/css/simple-sidebar.css">
 
     <!-- Pygments Github CSS -->
     <link rel="stylesheet" href="/css/syntax.css">
@@ -39,11 +42,11 @@
 <body>
 
     <!-- Navigation -->
-<header class="main-nav fixed-nav">
+<header class="main-nav navbar-fixed-top">
   <div class="container">
     <div class="row">
       <div class="col-xs-4 ">
-        <a class="brand" href="/">Christophe Estanol - Blog</a>
+
       </div>
       <div class="col-xs-8 text-right">
         <ul class="nav">
@@ -56,13 +59,30 @@
 </header>
 
 
-    <!-- Page Header -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+      <div class="sidebar-content">
+        <a class="brand" href="/">Christophe Estanol</a>
+
+        <img class="img-round" src="/img/profile.jpg" alt="Post Sample Image">
+
+        <p>Hi, I’m Christophe Estanol and I’m a Front End Developer. Learn more about me.
+
+        Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!
+        </p>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+<!-- Page Header -->
+<div id="page-content-wrapper">
 <header class="intro-header">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="site-heading">
-          <h1>Christophe Estanol - Blog</h1>
+          <!-- <h1>Christophe Estanol</h1> -->
           <hr class="small">
           <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
         </div>
@@ -72,7 +92,7 @@
 </header>
 
 <!-- Main Content -->
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			
@@ -107,6 +127,11 @@
 		</div>
 	</div>
 </div>
+</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
 <hr>
 
@@ -127,7 +152,7 @@
                     </li>
                     
                     <li>
-                        <a href="https://twitter.com/SBootstrap">
+                        <a href="https://twitter.com/chrisestanol">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -147,7 +172,7 @@
                     
                     
                     <li>
-                        <a href="https://github.com/davidtmiller">
+                        <a href="https://github.com/chrisestanol">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -156,7 +181,7 @@
                     </li>
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Christophe Estanol - Blog 2014</p>
+                <p class="copyright text-muted">Copyright &copy; Christophe Estanol 2014</p>
             </div>
         </div>
     </div>
@@ -170,6 +195,14 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/js/clean-blog.min.js "></script>
+
+<!-- Menu Toggle Script -->
+    <script>
+    $("#toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 
 </body>

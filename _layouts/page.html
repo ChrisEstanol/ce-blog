@@ -2,13 +2,30 @@
 layout: default
 ---
 
+<div id="wrapper">
+
+        <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+      <div class="sidebar-content">
+        <a class="brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+        <img class="img-round" src="{{ site.baseurl }}/img/profile.jpg" alt="Post Sample Image">
+
+        <p>Hi, I’m Christophe Estanol and I’m a Front End Developer. Learn more about me.
+
+        Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!
+        </p>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
 <!-- Page Header -->
+<div id="page-content-wrapper">
 <header class="intro-header">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="site-heading">
-          <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+          <!-- <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1> -->
           <hr class="small">
           <span class="subheading">{{ page.description }}</span>
         </div>
@@ -18,12 +35,17 @@ layout: default
 </header>
 
 <!-- Main Content -->
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			{{ content }}
 		</div>
 	</div>
 </div>
+</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
 <hr>

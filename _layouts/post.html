@@ -1,10 +1,27 @@
 ---
 layout: default
 ---
+<div id="wrapper">
 
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+      <div class="sidebar-content">
+        <a class="brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+        <img class="img-round" src="{{ site.baseurl }}/img/profile.jpg" alt="Post Sample Image">
+
+        <p>Hi, I’m Christophe Estanol and I’m a Front End Developer. Learn more about me.
+
+        Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!
+        </p>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+<div id="page-content-wrapper">
 <!-- Post Header -->
 <header class="intro-header">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
@@ -21,7 +38,7 @@ layout: default
 
 <!-- Post Content -->
 <article>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
@@ -45,5 +62,10 @@ layout: default
     </div>
   </div>
 </article>
+</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
 <hr>
