@@ -67,8 +67,8 @@ url: "http://chrisestanol.com"
 twitter_username: chrisestanol
 github_username:  chrisestanol
 ```
-The folders **_includes** and **layouts** contain the building blocks of your blog. You can create multiples layouts using [Liquid](http://liquidmarkup.org/) templating engine. The **_drafts** and **_posts** folders hold your creative work to be released to the world.
-When you run Jekyll the **_site** folder is created which contains all of your HTML nicely formated. You can add to this structure any folder you may need like css, js, img as well as additional static pages about.html, contact.html etc.
+The folders _includes and layouts contain the building blocks of your blog. You can create multiples layouts using [Liquid](http://liquidmarkup.org/) templating engine. The _drafts and _posts folders hold your creative work to be released to the world.
+When you run Jekyll the _site folder is created which contains all of your HTML nicely formated. You can add to this structure any folder you may need like css, js, img as well as additional static pages about.html, contact.html etc.
 
 ### Front Mater
 
@@ -98,6 +98,10 @@ author:     "Dr. Jekyll"
 </div>
 
 ```
+
+
+
+
 
 
 
