@@ -5,46 +5,39 @@
     <description>Write your site description here. It will be used as your sites meta description as well!</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 Dec 2014 16:55:53 -0500</pubDate>
-    <lastBuildDate>Tue, 30 Dec 2014 16:55:53 -0500</lastBuildDate>
+    <pubDate>Sun, 01 Feb 2015 20:47:31 -0500</pubDate>
+    <lastBuildDate>Sun, 01 Feb 2015 20:47:31 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Man must explore, and this is exploration at its greatest</title>
-        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+        <title>Blogging with jekyll 101</title>
+        <description>&lt;p&gt;Let’s get started this blogging thing with a bit of inside on how to get started with Jekyll and host it for free with github pages.
+It took me a while to figure out the whole process and I actually had to use &lt;a href=&quot;https://cloudflare.com/&quot;&gt;Cloudflare&lt;/a&gt; to get over a 302 error.&lt;/p&gt;
 
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://Jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator widely used amongst developer, designer or anybody just wiling to write from a simple editor like Sublime or Atom. Jekyll uses &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; syntax to format the post into HTML. It is pretty lightweight, easy to use but the best thing about Jekyll is that it can be hosted on &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; for free.
+Jekyll has a very comprehensive documentation to get you started in no time. To start exploring how Jekyll works
+just run the following &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;commands&lt;/a&gt;.
+The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
 
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
+&lt;h3 id=&quot;here-are-my-top-10-jekyll-themesrepos&quot;&gt;Here are my top 10 jekyll themes/repos:&lt;/h3&gt;
 
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://incorporated.sendtoinc.com/&quot;&gt;Jekyll incorporated&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://andhyde.com/&quot;&gt;Hyde&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://demo.getpoole.com/&quot;&gt;Poole&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pixyll.com/&quot;&gt;Pixyll&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/&quot;&gt;Clean Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ellekasai.github.io/shiori/&quot;&gt;Shiori&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://scotte.github.io/jekyll-clean/&quot;&gt;Jekyll clean&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnp/cahoon&quot;&gt;Cahoon&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jekyllnow.com/&quot;&gt;Jekyll now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sentenza/jekyll-material-design&quot;&gt;Jekyll Material Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
+&lt;p&gt;This blog is based on &lt;a href=&quot;http://ironsummitmedia.github.io/&quot;&gt;Clean Blog&lt;/a&gt; with a &lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/&quot;&gt;simple side-bar&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
-&lt;/a&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Sep 2014 07:00:00 -0500</pubDate>
         <link>http://chrisestanol.com/2014/09/24/man-must-explore/</link>
