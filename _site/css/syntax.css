@@ -1,12 +1,21 @@
 /* to make lines scroll instead of wrap */
 /* from http://stackoverflow.com/a/23393920 */
 
+code, kbd, pre, samp {
+/*font-family: monospace,monospace;*/
+font-size: 0.7em;
+border: none;
+border-radius: 0;
+}
+
 .highlight pre code * {
   white-space: nowrap;    // this sets all children inside to nowrap
 }
 
 .highlight pre {
-  overflow-x: auto;       // this sets the scrolling in x
+  color: #616161;
+  border-left: .33em solid #4CA8BC;
+  background-color: #f6f6f6;
 }
 
 .highlight pre code {
@@ -19,7 +28,7 @@
  * Courtesy of GitHub.com
  */
 
-.highlight pre, pre, .highlight .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
+.highlight pre, pre, .highlight .hll { background-color: #f8f8f8; padding: 20px;}
 .highlight .c { color: #999988; font-style: italic; }
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
 .highlight .k { font-weight: bold; }

@@ -1,15 +1,17 @@
 # Site settings
-title: Christophe Estanol
+title: Christophe Estanol - Blog
 email: your-email@yourdomain.com
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
 url: "http://chrisestanol.com"
 twitter_username: chrisestanol
 github_username:  chrisestanol
-facebook_username:  IronSummitMedia
+facebook_username:
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     "with_toc_data"]
 highlighter: pygments
 permalink: pretty
 paginate: 5

@@ -1,44 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Christophe Estanol</title>
+    <title>Christophe Estanol - Blog</title>
     <description>Write your site description here. It will be used as your sites meta description as well!</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 01 Feb 2015 20:47:31 -0500</pubDate>
-    <lastBuildDate>Sun, 01 Feb 2015 20:47:31 -0500</lastBuildDate>
+    <pubDate>Mon, 02 Feb 2015 17:52:05 -0500</pubDate>
+    <lastBuildDate>Mon, 02 Feb 2015 17:52:05 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Blogging with jekyll 101</title>
-        <description>&lt;p&gt;Let’s get started this blogging thing with a bit of inside on how to get started with Jekyll and host it for free with github pages.
+        <description>&lt;p&gt;Let&amp;#39;s get started this blogging thing with a bit of inside on how to get started with Jekyll and host it for free with github pages.
 It took me a while to figure out the whole process and I actually had to use &lt;a href=&quot;https://cloudflare.com/&quot;&gt;Cloudflare&lt;/a&gt; to get over a 302 error.&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://Jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator widely used amongst developer, designer or anybody just wiling to write from a simple editor like Sublime or Atom. Jekyll uses &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; syntax to format the post into HTML. It is pretty lightweight, easy to use but the best thing about Jekyll is that it can be hosted on &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; for free.
+&lt;p&gt;&lt;a href=&quot;http://Jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator widely used amongst developer, designer or anybody just wiling to write from a simple editor like Sublime or Atom. Jekyll uses &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; syntax to format the post into HTML. It is pretty lightweight, easy to use but the best thing about Jekyll is that it can be hosted with &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github pages&lt;/a&gt; for free.
 Jekyll has a very comprehensive documentation to get you started in no time. To start exploring how Jekyll works
 just run the following &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;commands&lt;/a&gt;.
-The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
+The easiest way to start your blog is to fork an existing repo. I had a look around a made a list of the best templates available.&lt;/p&gt;
 
-&lt;h3 id=&quot;here-are-my-top-10-jekyll-themesrepos&quot;&gt;Here are my top 10 jekyll themes/repos:&lt;/h3&gt;
+&lt;h3 id=&quot;here-are-my-top-10-jekyll-themes/repos:&quot;&gt;Here are my top 10 jekyll themes/repos:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://incorporated.sendtoinc.com/&quot;&gt;Jekyll incorporated&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://andhyde.com/&quot;&gt;Hyde&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://demo.getpoole.com/&quot;&gt;Poole&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://pixyll.com/&quot;&gt;Pixyll&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/&quot;&gt;Clean Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ellekasai.github.io/shiori/&quot;&gt;Shiori&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://scotte.github.io/jekyll-clean/&quot;&gt;Jekyll clean&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnp/cahoon&quot;&gt;Cahoon&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.jekyllnow.com/&quot;&gt;Jekyll now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/sentenza/jekyll-material-design&quot;&gt;Jekyll Material Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://incorporated.sendtoinc.com/&quot;&gt;Jekyll incorporated&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://andhyde.com/&quot;&gt;Hyde&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://demo.getpoole.com/&quot;&gt;Poole&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pixyll.com/&quot;&gt;Pixyll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/&quot;&gt;Clean Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ellekasai.github.io/shiori/&quot;&gt;Shiori&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://scotte.github.io/jekyll-clean/&quot;&gt;Jekyll clean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/arnp/cahoon&quot;&gt;Cahoon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jekyllnow.com/&quot;&gt;Jekyll now&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sentenza/jekyll-material-design&quot;&gt;Jekyll Material Design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This blog is based on &lt;a href=&quot;http://ironsummitmedia.github.io/&quot;&gt;Clean Blog&lt;/a&gt; with a &lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/&quot;&gt;simple side-bar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This blog is based on &lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/&quot;&gt;Clean Blog&lt;/a&gt; with a &lt;a href=&quot;http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/&quot;&gt;simple side-bar&lt;/a&gt; . I wanted a website based on &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; so I could keep on adding on top of a responsive framework I am  familiar with.&lt;/p&gt;
 
-</description>
+&lt;h3 id=&quot;jekyll-structure:&quot;&gt;Jekyll structure:&lt;/h3&gt;
+
+&lt;p&gt;This is the basic Jekyll layout&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;.
+├── _config.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-
+|   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _data
+|   └── members.yml
+├── _site
+└── index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The _config.yml file contains some general settings about  your page&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Christophe Estanol - Blog&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;hi@chrisestanol.com&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Write&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;here.&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://chrisestanol.com&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;twitter_username&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;chrisestanol&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;github_username&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;chrisestanol&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The folders &lt;strong&gt;_includes&lt;/strong&gt; and &lt;strong&gt;layouts&lt;/strong&gt; contain the building blocks of your blog. You can create multiples layouts using &lt;a href=&quot;http://liquidmarkup.org/&quot;&gt;Liquid&lt;/a&gt; templating engine. The &lt;strong&gt;_drafts&lt;/strong&gt; and &lt;strong&gt;_posts&lt;/strong&gt; folders hold your creative work to be released to the world.
+When you run Jekyll the &lt;strong&gt;_site&lt;/strong&gt; folder is created which contains all of your HTML nicely formated. You can add to this structure any folder you may need like css, js, img as well as additional static pages about.html, contact.html etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;front-mater&quot;&gt;Front Mater&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;YAML Front Matter&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;A very simple way to add structured data to a page.&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Jekyll uses &lt;a href=&quot;http://jekyllrb.com/docs/frontmatter/&quot;&gt;YAML Front Matter&lt;/a&gt; to add structured data like variables or any particular layout to a page. The variables can be created and then used within the page using &lt;a href=&quot;http://liquidmarkup.org/&quot;&gt;Liquid&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;---
+layout:     post
+title:      &amp;quot;Dinosaurs are extinct today&amp;quot;
+subtitle:   &amp;quot;because they lacked opposable thumbs and the brainpower to build a space program.&amp;quot;
+date:       2014-06-10 12:00:00
+author:     &amp;quot;Dr. Jekyll&amp;quot;
+---
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;post-heading&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Blogging with jekyll 101&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;subheading&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Getting this adventure off the ground&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;meta&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;September 24, 2014 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Wed, 24 Sep 2014 07:00:00 -0500</pubDate>
         <link>http://chrisestanol.com/2014/09/24/man-must-explore/</link>
         <guid isPermaLink="true">http://chrisestanol.com/2014/09/24/man-must-explore/</guid>
@@ -47,7 +103,7 @@ The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
       </item>
     
       <item>
-        <title>I believe every human has a finite number of heartbeats. I don&#39;t intend to waste any of mine.</title>
+        <title>I believe eve.</title>
         <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
@@ -73,7 +129,7 @@ The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
 &lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot;&gt;
 &lt;/a&gt;
 &lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
 
@@ -117,7 +173,7 @@ The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
 &lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot;&gt;
 &lt;/a&gt;
 &lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
 
@@ -161,7 +217,7 @@ The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
 &lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot;&gt;
 &lt;/a&gt;
 &lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
 
@@ -205,7 +261,7 @@ The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
 &lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot;&gt;
 &lt;/a&gt;
 &lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
 
@@ -249,7 +305,7 @@ The easiest way to get you started is to fork an existing repo.&lt;/p&gt;
 &lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot;&gt;
 &lt;/a&gt;
 &lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
 

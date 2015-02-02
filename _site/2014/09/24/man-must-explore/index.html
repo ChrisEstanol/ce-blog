@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Write your site description here. It will be used as your sites meta description as well!">
 
-    <title>Blogging with jekyll 101 - Christophe Estanol</title>
+    <title>Blogging with jekyll 101 - Christophe Estanol - Blog</title>
 
     <link rel="canonical" href="http://chrisestanol.com/2014/09/24/man-must-explore/">
 
@@ -82,41 +82,97 @@
     <div class="row">
       <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
 
-          <p>Let’s get started this blogging thing with a bit of inside on how to get started with Jekyll and host it for free with github pages.
+          <p>Let&#39;s get started this blogging thing with a bit of inside on how to get started with Jekyll and host it for free with github pages.
 It took me a while to figure out the whole process and I actually had to use <a href="https://cloudflare.com/">Cloudflare</a> to get over a 302 error.</p>
 
 <h2 id="jekyll">Jekyll</h2>
 
-<p><a href="http://Jekyllrb.com">Jekyll</a> is a static site generator widely used amongst developer, designer or anybody just wiling to write from a simple editor like Sublime or Atom. Jekyll uses <a href="http://daringfireball.net/projects/markdown/">Markdown</a> syntax to format the post into HTML. It is pretty lightweight, easy to use but the best thing about Jekyll is that it can be hosted on <a href="http://github.com">Github</a> for free.
+<p><a href="http://Jekyllrb.com">Jekyll</a> is a static site generator widely used amongst developer, designer or anybody just wiling to write from a simple editor like Sublime or Atom. Jekyll uses <a href="http://daringfireball.net/projects/markdown/">Markdown</a> syntax to format the post into HTML. It is pretty lightweight, easy to use but the best thing about Jekyll is that it can be hosted with <a href="https://pages.github.com/">Github pages</a> for free.
 Jekyll has a very comprehensive documentation to get you started in no time. To start exploring how Jekyll works
 just run the following <a href="http://jekyllrb.com/docs/quickstart/">commands</a>.
-The easiest way to get you started is to fork an existing repo.</p>
+The easiest way to start your blog is to fork an existing repo. I had a look around a made a list of the best templates available.</p>
 
-<h3 id="here-are-my-top-10-jekyll-themesrepos">Here are my top 10 jekyll themes/repos:</h3>
+<h3 id="here-are-my-top-10-jekyll-themes/repos:">Here are my top 10 jekyll themes/repos:</h3>
 
 <ul>
-  <li><a href="http://incorporated.sendtoinc.com/">Jekyll incorporated</a></li>
-  <li><a href="http://andhyde.com/">Hyde</a></li>
-  <li><a href="http://demo.getpoole.com/">Poole</a></li>
-  <li><a href="http://pixyll.com/">Pixyll</a></li>
-  <li><a href="http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a></li>
-  <li><a href="http://ellekasai.github.io/shiori/">Shiori</a></li>
-  <li><a href="http://scotte.github.io/jekyll-clean/">Jekyll clean</a></li>
-  <li><a href="https://github.com/arnp/cahoon">Cahoon</a></li>
-  <li><a href="http://www.jekyllnow.com/">Jekyll now</a></li>
-  <li><a href="https://github.com/sentenza/jekyll-material-design">Jekyll Material Design</a></li>
+<li><a href="http://incorporated.sendtoinc.com/">Jekyll incorporated</a></li>
+<li><a href="http://andhyde.com/">Hyde</a></li>
+<li><a href="http://demo.getpoole.com/">Poole</a></li>
+<li><a href="http://pixyll.com/">Pixyll</a></li>
+<li><a href="http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a></li>
+<li><a href="http://ellekasai.github.io/shiori/">Shiori</a></li>
+<li><a href="http://scotte.github.io/jekyll-clean/">Jekyll clean</a></li>
+<li><a href="https://github.com/arnp/cahoon">Cahoon</a></li>
+<li><a href="http://www.jekyllnow.com/">Jekyll now</a></li>
+<li><a href="https://github.com/sentenza/jekyll-material-design">Jekyll Material Design</a></li>
 </ul>
 
-<p>This blog is based on <a href="http://ironsummitmedia.github.io/">Clean Blog</a> with a <a href="http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">simple side-bar</a></p>
+<p>This blog is based on <a href="http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/">Clean Blog</a> with a <a href="http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">simple side-bar</a> . I wanted a website based on <a href="http://getbootstrap.com">Bootstrap</a> so I could keep on adding on top of a responsive framework I am  familiar with.</p>
 
+<h3 id="jekyll-structure:">Jekyll structure:</h3>
 
+<p>This is the basic Jekyll layout</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">.
+├── _config.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-
+|   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _data
+|   └── members.yml
+├── _site
+└── index.html
+</code></pre></div>
+<p>The _config.yml file contains some general settings about  your page</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Christophe Estanol - Blog</span>
+<span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hi@chrisestanol.com</span>
+<span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="s">&quot;Write</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">site</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">here.&quot;</span>
+<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="s">&quot;&quot;</span>
+<span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="s">&quot;http://chrisestanol.com&quot;</span>
+<span class="l-Scalar-Plain">twitter_username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">chrisestanol</span>
+<span class="l-Scalar-Plain">github_username</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">chrisestanol</span>
+</code></pre></div>
+<p>The folders <strong>_includes</strong> and <strong>layouts</strong> contain the building blocks of your blog. You can create multiples layouts using <a href="http://liquidmarkup.org/">Liquid</a> templating engine. The <strong>_drafts</strong> and <strong>_posts</strong> folders hold your creative work to be released to the world.
+When you run Jekyll the <strong>_site</strong> folder is created which contains all of your HTML nicely formated. You can add to this structure any folder you may need like css, js, img as well as additional static pages about.html, contact.html etc.</p>
+
+<h3 id="front-mater">Front Mater</h3>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">YAML Front Matter</span>
+<span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">A very simple way to add structured data to a page.</span>
+<span class="nn">---</span>
+</code></pre></div>
+<p>Jekyll uses <a href="http://jekyllrb.com/docs/frontmatter/">YAML Front Matter</a> to add structured data like variables or any particular layout to a page. The variables can be created and then used within the page using <a href="http://liquidmarkup.org/">Liquid</a>.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">---
+layout:     post
+title:      &quot;Dinosaurs are extinct today&quot;
+subtitle:   &quot;because they lacked opposable thumbs and the brainpower to build a space program.&quot;
+date:       2014-06-10 12:00:00
+author:     &quot;Dr. Jekyll&quot;
+---
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;post-heading&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Blogging with jekyll 101<span class="nt">&lt;/h1&gt;</span>
+
+  <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;subheading&quot;</span><span class="nt">&gt;</span>Getting this adventure off the ground<span class="nt">&lt;/h2&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;meta&quot;</span><span class="nt">&gt;</span>September 24, 2014 <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
           <hr>
 
           <ul class="pager">
               
             <li class="previous">
-                <a href="/2014/09/18/i-believe/" data-toggle="tooltip" data-placement="top" title="I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.">&larr; Previous Post</a>
+                <a href="/2014/09/18/i-believe/" data-toggle="tooltip" data-placement="top" title="I believe eve.">&larr; Previous Post</a>
             </li>
             
             
@@ -155,15 +211,6 @@ The easiest way to get you started is to fork an existing repo.</p>
                     </li>
                     
                     
-                    <li>
-                        <a href="https://www.facebook.com/IronSummitMedia">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
                     
                     <li>
                         <a href="https://github.com/chrisestanol">
@@ -175,7 +222,7 @@ The easiest way to get you started is to fork an existing repo.</p>
                     </li>
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Christophe Estanol 2015</p>
+                <p class="copyright text-muted">Copyright &copy; Christophe Estanol - Blog 2015</p>
             </div>
         </div>
     </div>
