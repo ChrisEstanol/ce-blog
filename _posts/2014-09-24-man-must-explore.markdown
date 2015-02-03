@@ -4,17 +4,18 @@ title:      "Blogging with jekyll 101"
 subtitle:   "Getting this adventure off the ground"
 date:       2014-09-24 12:00:00
 author:     "Christophe Estanol"
+comments:   True
 ---
 
-Let's get started this blogging thing with a bit of inside on how to get started with Jekyll and host it for free with github pages.
-It took me a while to figure out the whole process and I actually had to use [Cloudflare](https://cloudflare.com/) to get over a 302 error.
+Let's start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain your blog in a minimal style worpdress can be overwhelming.
+It took me a while to figure out jekyll and I actually had to use [Cloudflare](https://cloudflare.com/) to get over a 302 error.
 
 ## Jekyll
 
 [Jekyll](http://Jekyllrb.com) is a static site generator widely used amongst developer, designer or anybody just wiling to write from a simple editor like Sublime or Atom. Jekyll uses [Markdown](http://daringfireball.net/projects/markdown/) syntax to format the post into HTML. It is pretty lightweight, easy to use but the best thing about Jekyll is that it can be hosted with [Github pages](https://pages.github.com/) for free.
 Jekyll has a very comprehensive documentation to get you started in no time. To start exploring how Jekyll works
 just run the following [commands](http://jekyllrb.com/docs/quickstart/).
-The easiest way to start your blog is to fork an existing repo. I had a look around a made a list of the best templates available.
+The easiest way to start your blog is to fork an existing repository. I had a look around a made a list of the best templates available.
 
 ### Here are my top 10 jekyll themes/repos:
 
@@ -29,10 +30,11 @@ The easiest way to start your blog is to fork an existing repo. I had a look aro
 * [Jekyll now](http://www.jekyllnow.com/)
 * [Jekyll Material Design](https://github.com/sentenza/jekyll-material-design)
 
-This blog is based on [Clean Blog](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/) with a [simple side-bar](http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/) . I wanted a website based on [Bootstrap](http://getbootstrap.com) so I could keep on adding on top of a responsive framework I am  familiar with.
+This blog is based on [Clean Blog](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/) with a [simple side-bar](http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/) . I wanted a website based on [Bootstrap](http://getbootstrap.com) so I could keep on adding on top of a responsive framework I am familiar with.
+
+Once you have chosen a blog template you can run it localy, customize it, write your posts and push everything out to your github repo to be published. I'll be writing a follow up to this post about the ways to host your blog on github pages and configure your own domain name.
 
 ### Jekyll structure:
-
 This is the basic Jekyll layout
 
 ```
@@ -67,7 +69,7 @@ url: "http://chrisestanol.com"
 twitter_username: chrisestanol
 github_username:  chrisestanol
 ```
-The folders _includes and layouts contain the building blocks of your blog. You can create multiples layouts using [Liquid](http://liquidmarkup.org/) templating engine. The _drafts and _posts folders hold your creative work to be released to the world.
+The folders _includes and _layouts contain the building blocks of your blog. You can create multiples layouts using [Liquid](http://liquidmarkup.org/) templating engine. The _drafts and _posts folders hold your creative work to be released to the world.
 When you run Jekyll the _site folder is created which contains all of your HTML nicely formated. You can add to this structure any folder you may need like css, js, img as well as additional static pages about.html, contact.html etc.
 
 ### Front Mater
@@ -88,7 +90,7 @@ subtitle:   "because they lacked opposable thumbs and the brainpower to build a 
 date:       2014-06-10 12:00:00
 author:     "Dr. Jekyll"
 ---
-
+{% raw %}
 <div class="post-heading">
   <h1>{{ page.title }}</h1>
   {% if page.subtitle %}
@@ -96,8 +98,29 @@ author:     "Dr. Jekyll"
   {% endif %}
   <span class="meta">{{ page.date | date: "%B %-d, %Y" }} </span>
 </div>
+{% endraw %}
 
 ```
+By the way to publish the above code within your post so that Jekyll doesn't render the liquid part like ``{% raw %}{{ page.title }}{% endraw %}`` you need to surround it with a `{% raw %}{% raw %}{% endraw %}` tag.
+
+### Markdown
+
+There are multiple free or inexpensive ways to write [Markdown](http://daringfireball.net/projects/markdown/). The main text editiors for coding, web development like [Sublime text](http://www.sublimetext.com/), [Atom](https://atom.io/) or [Textmate](http://macromates.com/) all support markdown syntax. You can use one of many online editor like [Dillinger](http://dillinger.io), [Stackedit](https://stackedit.io), or [Markable](http://markable.in/). Or install a distraction free desktop application like [Ia Writer](https://ia.net/writer/mac/) or [Mou](http://25.io/mou/). I have been using Mou to start writing and I like the viewer and funky themes.
+
+### Publish your Post
+
+So now that you know a little more about Jekyll and markdown let's get writing.
+In your _post folder just create a markdown file. Markdown extensions can vary but the most supported are .markdown, .md, .mkd, .mkdn. So you can use any of these and name your file with the following syntax:
+
+**2015-02-01-your-new-blog-post.md**
+
+Simply year-month-day-your-new-title.md
+
+And your ready to push it to github and have your first blog post published.
+Happy writing everyone!
+
+
+
 
 
 

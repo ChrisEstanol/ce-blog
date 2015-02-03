@@ -101,6 +101,10 @@ margin-bottom: 0;
 float: left;
 }
 
+#disqus_thread {
+  padding-top: 50px;
+}
+
 .intro-header {
 
 }
