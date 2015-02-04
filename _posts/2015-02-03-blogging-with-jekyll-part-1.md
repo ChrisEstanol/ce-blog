@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Blogging with jekyll 101"
-subtitle:   "Getting this adventure off the ground"
-date:       2014-09-24 12:00:00
+title:      "Blogging with jekyll - Part 1"
+subtitle:   "Get Jekyll set up and start writing your first post in no time"
+date:       2015-02-03 12:00:00
 author:     "Christophe Estanol"
 comments:   True
 ---

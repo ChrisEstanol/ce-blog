@@ -1,12 +1,12 @@
 # Site settings
 title: Christophe Estanol - Blog
 email: your-email@yourdomain.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "Christophe Estanol's blog"
 baseurl: ""
 url: "http://chrisestanol.com"
 twitter_username: chrisestanol
 github_username:  chrisestanol
-facebook_username:
+linkedin_username: chrisestanol
 
 # Build settings
 markdown: redcarpet
