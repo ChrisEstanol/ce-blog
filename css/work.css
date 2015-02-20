@@ -1,0 +1,4 @@
+.work-list a:focus img,
+.work-list a:hover img {
+  opacity: .75;
+}
