@@ -4,6 +4,7 @@ title:      "Blogging with jekyll - Part 2"
 subtitle:   "Host your site with gihub page and configure a custom domain name"
 date:       2015-02-04 12:00:00
 author:     "Christophe Estanol"
+share:      True
 comments:   True
 ---
 

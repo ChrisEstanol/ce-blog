@@ -4,6 +4,7 @@ title:      "Blogging with jekyll - Part 1"
 subtitle:   "Get Jekyll set up and start writing your first post in no time"
 date:       2015-02-03 12:00:00
 author:     "Christophe Estanol"
+share:      True
 comments:   True
 ---
 
