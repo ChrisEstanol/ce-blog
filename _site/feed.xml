@@ -5,8 +5,8 @@
     <description>Christophe Estanol&#39;s website</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 22 Feb 2015 12:36:08 -0500</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 12:36:08 -0500</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2015 14:38:09 -0500</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2015 14:38:09 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,8 +21,8 @@ Github also enable hosting of static websites which means that a basic bootstrap
 &lt;p&gt;There are two ways to host your webpage with &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github&lt;/a&gt;. You can&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/2015/02/04/blogging-with-jekyll-part-2/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/2015/02/04/blogging-with-jekyll-part-2/</guid>
+        <link>http://chrisestanol.com/blogging-with-jekyll-part-2/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blogging-with-jekyll-part-2/</guid>
         
         
       </item>
@@ -134,8 +134,8 @@ In your _post folder just create a markdown file. Markdown extensions can vary b
 Happy writing everyone!&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/2015/02/03/blogging-with-jekyll-part-1/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/2015/02/03/blogging-with-jekyll-part-1/</guid>
+        <link>http://chrisestanol.com/blogging-with-jekyll-part-1/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blogging-with-jekyll-part-1/</guid>
         
         
       </item>
