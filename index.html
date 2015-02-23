@@ -4,21 +4,23 @@ title: "Christophe Estanol | Website"
 description: "This is what I do."
 ---
 
-{% for post in site.categories.blog %}
-<div class="post-preview">
+<div class="media">
+  {% for post in site.categories.blog %}
+  <div class="media-left media-middle">
+      <img class="media-object" src="{{ site.baseurl}}/{{post.thumb-img }}" alt="...">
+  </div>
+  <div class="media-body post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
+      <h2 class="media-heading post-title">{{ post.title }}</h2>
+      </h2>
+      {% if post.subtitle %}
+      <h3 class="post-subtitle">
+          {{ post.subtitle }}
+      </h3>
+      {% endif %}
     </a>
     <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+  </div>
+  <hr>
+  {% endfor %}
 </div>
-<hr>
-{% endfor %}
-
-
