@@ -1,11 +1,12 @@
 ---
 layout:     post
 title:      "Blogging with jekyll - Part 2"
-subtitle:   "Host your site with gihub page and configure a custom domain name"
+subtitle:   "Host your site with github page and configure a custom domain name"
 date:       2015-02-04 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
+category:   blog
 ---
 
 As Github users we are all entitled an unlimited number of repositories to hold on our precious code and make it easy to control versions of our builds.

@@ -5,8 +5,8 @@
     <description>Christophe Estanol&#39;s website</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 22 Feb 2015 14:38:09 -0500</pubDate>
-    <lastBuildDate>Sun, 22 Feb 2015 14:38:09 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Feb 2015 16:18:44 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Feb 2015 16:18:44 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,9 +21,11 @@ Github also enable hosting of static websites which means that a basic bootstrap
 &lt;p&gt;There are two ways to host your webpage with &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github&lt;/a&gt;. You can&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/blogging-with-jekyll-part-2/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/blogging-with-jekyll-part-2/</guid>
+        <link>http://chrisestanol.com/blog/2015/02/04/blogging-with-jekyll-part-2/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/04/blogging-with-jekyll-part-2/</guid>
         
+        
+        <category>blog</category>
         
       </item>
     
@@ -130,13 +132,63 @@ In your _post folder just create a markdown file. Markdown extensions can vary b
 
 &lt;p&gt;Simply year-month-day-your-new-title.md&lt;/p&gt;
 
-&lt;p&gt;And your ready to push it to github and have your first blog post published.
+&lt;p&gt;And you&amp;#39;re ready to push it to github and have your first blog post published.
 Happy writing everyone!&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/blogging-with-jekyll-part-1/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/blogging-with-jekyll-part-1/</guid>
+        <link>http://chrisestanol.com/blog/2015/02/03/blogging-with-jekyll-part-1/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/03/blogging-with-jekyll-part-1/</guid>
         
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Marketplace</title>
+        <description></description>
+        <pubDate>Tue, 04 Apr 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/04/04/marketplace/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/04/04/marketplace/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>Ouisi</title>
+        <description></description>
+        <pubDate>Fri, 03 Mar 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/03/03/ouisi/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/03/03/ouisi/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>Hernando Tejada</title>
+        <description></description>
+        <pubDate>Wed, 02 Feb 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/02/02/tejada/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/02/02/tejada/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>La Ché</title>
+        <description></description>
+        <pubDate>Sat, 01 Jan 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/01/01/lache/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/01/01/lache/</guid>
+        
+        
+        <category>work</category>
         
       </item>
     

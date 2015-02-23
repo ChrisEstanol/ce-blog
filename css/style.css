@@ -94,6 +94,11 @@ hr.small {
   font-weight: 800;
   letter-spacing: 1px;
 }
+
+.current {
+  color: #337ab7
+}
+
 .main-nav .nav {
 display: inline-block;
 list-style-type: none;

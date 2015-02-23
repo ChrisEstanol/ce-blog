@@ -6,6 +6,7 @@ date:       2015-02-03 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
+category:   blog
 ---
 
 Let's start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain your blog in a minimal style worpdress can be overwhelming.
@@ -117,7 +118,7 @@ In your _post folder just create a markdown file. Markdown extensions can vary b
 
 Simply year-month-day-your-new-title.md
 
-And your ready to push it to github and have your first blog post published.
+And you're ready to push it to github and have your first blog post published.
 Happy writing everyone!
 
 
