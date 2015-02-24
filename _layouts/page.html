@@ -1,35 +1,52 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
 
 <div id="wrapper">
 
   {% include sidebar.html %}
-<!-- Page Header -->
-<div id="page-content-wrapper">
-<header class="intro-header">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
-        <div class="site-heading">
-          <!-- <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1> -->
-         </div>
+  <!-- Page Header -->
+  <div id="page-content-wrapper">
+
+    <header class="intro-header">
+      <div class="container-fluid">
+        <a href="#menu-toggle" class="pull-right" id="menu-toggle">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-bars fa-stack-1x"></i>
+          </span>
+        </a>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="site-heading">
+              <div class="logo-responsive"></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    			{{ content }}
+    		</div>
+    	</div>
     </div>
+
+          <!-- /#page-content-wrapper -->
+          {% include footer.html %}
   </div>
-</header>
-
-<!-- Main Content -->
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
-			{{ content }}
-		</div>
-	</div>
-</div>
-</div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
     <!-- /#wrapper -->
+</div>
 
+
+
+
+
+</body>
+
+</html>
