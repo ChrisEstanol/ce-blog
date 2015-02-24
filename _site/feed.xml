@@ -5,14 +5,14 @@
     <description>Christophe Estanol&#39;s website</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 24 Feb 2015 10:29:34 -0500</pubDate>
-    <lastBuildDate>Tue, 24 Feb 2015 10:29:34 -0500</lastBuildDate>
+    <pubDate>Tue, 24 Feb 2015 13:41:33 -0500</pubDate>
+    <lastBuildDate>Tue, 24 Feb 2015 13:41:33 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Blogging with jekyll - Part 2</title>
         <description>&lt;p&gt;As Github users we are all entitled an unlimited number of repositories to hold on our precious code and make it easy to control versions of our builds.
-Github also enable hosting of static websites which means that a basic bootstrap webpage can be hosted for free thanks to github. Jekyll, which is also technicaly a static website comes in handy and can also be hosted for free thanks to our wonderfull friends at github.&lt;/p&gt;
+Github also enable hosting of static websites which means that a basic bootstrap webpage can be hosted for free thanks to github. Jekyll, which is also technicaly a static website comes in handy and can also be hosted for free thanks to our friends at github.&lt;/p&gt;
 
 &lt;p&gt;Isn&amp;#39;t it a relief to know that you won&amp;#39;t have to search for a hosting provider that is both performant and cheap, set up an FTP to upload your website and do that everytime you make the slightest update...&lt;/p&gt;
 
