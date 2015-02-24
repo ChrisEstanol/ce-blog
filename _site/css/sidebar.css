@@ -38,10 +38,15 @@
 }
 
 #page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
+    min-height:100%;
+    height: auto !important;
+    margin: 0 auto -3em;
 }
+
+.push {
+  height: 4em;
+}
+
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
