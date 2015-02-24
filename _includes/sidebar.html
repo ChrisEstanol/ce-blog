@@ -9,14 +9,8 @@
 
         Have a look around and please don’t hesitate to <a href="mailto:hi@chrisestanol.com?Subject=Hello" target="_top">contact me</a> with any comments, questions, or just to say hello!
         </p>
-        <ul class="list-inline text-center">
-          <!-- <li>
-            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-rss fa-stack-1x"></i>
-              </span>
-            </a>
-          </li> -->
+        {% include side-nav.html %}
+        <ul class="side-social list-inline text-center">
           {% if site.twitter_username %}
           <li>
               <a href="https://twitter.com/{{ site.twitter_username }}">

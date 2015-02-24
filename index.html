@@ -1,26 +1,22 @@
 ---
-layout: page
-title: "Christophe Estanol | Website"
+layout: default
+title: "Home"
 description: "This is what I do."
 ---
 
-<div class="media">
-  {% for post in site.categories.blog %}
-  <div class="media-left media-middle">
-      <img class="media-object" src="{{ site.baseurl}}/{{post.thumb-img }}" alt="...">
-  </div>
-  <div class="media-body post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <h2 class="media-heading post-title">{{ post.title }}</h2>
-      </h2>
-      {% if post.subtitle %}
-      <h3 class="post-subtitle">
-          {{ post.subtitle }}
-      </h3>
-      {% endif %}
-    </a>
-    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-  </div>
-  <hr>
-  {% endfor %}
+  {% include nav.html %}
+
+<div class="parallax-container">
+  <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"></div>
+  <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="565"></div>
+  <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="565"></div>
+  <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="565"></div>
+  <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="565"></div>
+  <div class="parallax-layer layer-5" data-parallax-speed="0.9" data-max-scroll="565"></div>
 </div>
+
+<div class="content">
+  <h1>This is my content.</h1>
+
+
+<script src="{{ site.baseurl }}/js/parallax.js"></script>

@@ -242,13 +242,6 @@ footer .copyright {
   text-align: center;
   margin-bottom: 0;
 }
-.floating-label-form-group {
-  font-size: 14px;
-  position: relative;
-  margin-bottom: 0;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid #eeeeee;
-}
 
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -269,27 +262,12 @@ footer .copyright {
   border: 1px solid #0085a1;
   color: white;
 }
-.pager {
-  margin: 20px 0 0;
-}
-.pager li > a,
-.pager li > span {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  padding: 10px 5px;
-  background-color: white;
-  -webkit-transition: color .4s;
-  -moz-transition: color .4s;
-  -o-transition: color .4s;
-  -transition: color .4s;
-  border-radius: 0;
 
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #0085a1;
 }
-@media only screen and (min-width: 768px) {
-
 ::selection {
   color: white;
   text-shadow: none;
@@ -393,9 +371,13 @@ body {
 }
 
 .header-img {
-  padding-top: 50px
+  padding-top: 80px
 }
 .header-img img {
   text-align: center;
   margin: auto;
+}
+
+.media {
+  padding-top: 100px;
 }

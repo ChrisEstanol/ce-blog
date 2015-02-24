@@ -18,7 +18,11 @@
     top: 0;
     z-index: 5;
     background: #dbf0ff url('../img/logo2.png') no-repeat top 40px center;
+    transition: background-image 1s ease-in-out;
     background-size: 130px;
+  }
+  .layer-0:hover {
+    background: #dbf0ff url('../img/logo.png') no-repeat top 40px center;
   }
   .layer-1 {
     top: -100px;

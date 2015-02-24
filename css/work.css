@@ -1,3 +1,7 @@
+.work-list {
+  padding-top: 100px;
+}
+
 .work-list a:focus img,
 .work-list a:hover img {
   opacity: .75;
