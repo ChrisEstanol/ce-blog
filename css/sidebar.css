@@ -31,6 +31,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    overflow: hidden;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -39,7 +40,6 @@
 
 #page-content-wrapper {
     min-height:100%;
-    height: auto !important;
     margin: 0 auto -3em;
 }
 
