@@ -97,6 +97,11 @@
 .side-nav li a {
   text-transform: uppercase;
   text-align: center;
+  color: #000;
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  -transition: color .4s;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -106,6 +111,20 @@
 
 .side-social {
   padding-top: 3em;
+}
+
+.side-social li a {
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  -transition: color .4s;
+  color: #000;
+}
+
+.side-social li a:hover,
+.side-nav li a:hover {
+  color: #f26c4f;
+  text-decoration: none;
 }
 
 

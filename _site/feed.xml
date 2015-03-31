@@ -5,8 +5,8 @@
     <description>Christophe Estanol&#39;s website</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 02 Mar 2015 19:17:13 -0500</pubDate>
-    <lastBuildDate>Mon, 02 Mar 2015 19:17:13 -0500</lastBuildDate>
+    <pubDate>Mon, 30 Mar 2015 20:47:55 -0500</pubDate>
+    <lastBuildDate>Mon, 30 Mar 2015 20:47:55 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -16,13 +16,41 @@ Github also enable hosting of static websites which means that a basic bootstrap
 
 &lt;p&gt;Isn&amp;#39;t it a relief to know that you won&amp;#39;t have to search for a hosting provider that is both performant and cheap, set up an FTP to upload your website and do that everytime you make the slightest update...&lt;/p&gt;
 
-&lt;p&gt;This is why Jekyll has been so popular because if you are already familiar with git and github your next post is just a commit away.&lt;/p&gt;
+&lt;p&gt;This is why Jekyll has been so popular because if you are already familiar with git and github updating your portfolio or publishing a blog post your is just a commit away.&lt;/p&gt;
 
-&lt;p&gt;There are two ways to host your webpage with &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github&lt;/a&gt;. You can&lt;/p&gt;
+&lt;h3 id=&quot;github-pages&quot;&gt;Github Pages&lt;/h3&gt;
+
+&lt;p&gt;There are two ways to host your webpage with &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github&lt;/a&gt;. There are User/Organisations pages or Project pages. Here are the main differences between the two:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can host your main website on &lt;code&gt;http(s)://&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, where username is your username (or organisation name) on GitHub and deploy your projects on &lt;code&gt;http(s)://&amp;lt;username&amp;gt;.github.io/&amp;lt;projectname&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You only have one user page but you can host an unlimited amount of project pages&lt;/li&gt;
+&lt;li&gt;For User pages you need to name you repository &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; for github to publish it as your web page. For project pages you can give it the name you like.&lt;/li&gt;
+&lt;li&gt;User/Organisations page will remain on the master branch whereas Project pages will need to be pushed on a special branch named &lt;code&gt;gh-pages&lt;/code&gt;. You will then need to set up gh-pages as your default page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/gh-pages.png&quot; alt=&quot;gh-pages branch&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;You can get more info about the different hosting modes on &lt;a href=&quot;https://help.github.com/articles/user-organization-and-project-pages/&quot;&gt;github help&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;h3 id=&quot;custom-domain&quot;&gt;Custom Domain&lt;/h3&gt;
+
+&lt;p&gt;You can use custom domain names with both Project pages and User pages.
+The set up is fairly easy:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a &lt;a href=&quot;https://help.github.com/articles/adding-a-cname-file-to-your-repository/&quot;&gt;CNAME&lt;/a&gt; document&lt;/li&gt;
+&lt;li&gt;Set up your &lt;a href=&quot;https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/&quot;&gt;DNS&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here is an example of my DNS settings with Cloudflare
+&lt;img src=&quot;/img/cloudflare.png&quot; alt=&quot;gh-pages branch&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s all you need!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 04 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/blog/2015/02/04/blogging-with-jekyll-part-2/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/04/blogging-with-jekyll-part-2/</guid>
+        <pubDate>Sun, 15 Feb 2015 07:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/blog/2015/02/15/blogging-with-jekyll-part-2/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/15/blogging-with-jekyll-part-2/</guid>
         
         
         <category>blog</category>
@@ -31,8 +59,7 @@ Github also enable hosting of static websites which means that a basic bootstrap
     
       <item>
         <title>Blogging with jekyll - Part 1</title>
-        <description>&lt;p&gt;Let&amp;#39;s start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain your blog in a minimal style worpdress can be overwhelming.
-It took me a while to figure out jekyll and I actually had to use &lt;a href=&quot;https://cloudflare.com/&quot;&gt;Cloudflare&lt;/a&gt; to get over a 302 error.&lt;/p&gt;
+        <description>&lt;p&gt;Let&amp;#39;s start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain your blog in a minimal style worpdress can be overwhelming.&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 

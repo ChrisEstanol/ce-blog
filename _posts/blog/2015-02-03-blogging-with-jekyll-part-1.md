@@ -12,7 +12,6 @@ category:   blog
 ---
 
 Let's start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain your blog in a minimal style worpdress can be overwhelming.
-It took me a while to figure out jekyll and I actually had to use [Cloudflare](https://cloudflare.com/) to get over a 302 error.
 
 ## Jekyll
 

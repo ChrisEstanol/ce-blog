@@ -49,7 +49,19 @@ p a {
   font-weight: 600;
 }
 
-p a:hover {
+li a {
+  color: #0085a1;
+  text-decoration: none;
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  -transition: color .4s;
+  backface-visibility: hidden;
+  font-weight: 600;
+}
+
+p a:hover,
+li a:hover {
   color: #f26c4f;
   text-decoration: none;
 }
