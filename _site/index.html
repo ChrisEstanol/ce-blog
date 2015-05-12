@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Christophe Estanol's website">
 
-    <title>Home - Christophe Estanol</title>
+    <title>Blog - Christophe Estanol</title>
 
     <link rel="canonical" href="http://chrisestanol.com/">
 
@@ -42,78 +42,133 @@
 
 <body>
 
+<div id="wrapper">
 
-      <!-- Navigation -->
-<header class="main-nav navbar-fixed-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 ">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+      <div class="sidebar-content">
 
-      </div>
-      <div class="col-xs-8 text-right">
-        <ul class="nav">
-          <li><a href="/" class="">Home</a></li>
-          <li><a href="/work" class="">Work</a></li>
-          <li><a href="/blog" class="">Blog</a></li>
-          <li><a href="/about" class="">About</a></li>
-        </ul>
-      </div>
+        <div class="logo"></div>
+        <!-- <img class="img-round" src="/img/logo4.png" alt="Post Sample Image"> -->
+
+        <p>Hi, I’m Christophe Estanol and I’m a Ruby on Rails Developer. Learn more about me.
+
+        Have a look around and please don’t hesitate to <a href="mailto:hi@chrisestanol.com?Subject=Hello" target="_top">contact me</a> with any comments, questions, or just to say hello!
+        </p>
+        <nav class="side-nav">
+  <ul class="nav">
+    <li><a href="/" class="">Home</a></li>
+    <li><a href="/work" class="">Work</a></li>
+    <!-- <li><a href="/blog" class="">Blog</a></li> -->
+    <li><a href="/about" class="">About</a></li>
+  </ul>
+</nav>
+
+        <ul class="side-social list-inline text-center">
+          
+          <li>
+              <a href="https://twitter.com/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-twitter fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+          
+          <li>
+              <a href="https://co.linkedin.com/in/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-linkedin fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+          
+          <li>
+              <a href="https://github.com/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-github fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+      </ul>
     </div>
   </div>
-</header>
+  <!-- /#sidebar-wrapper -->
 
+  <!-- Page Header -->
+  <div id="page-content-wrapper">
 
-<div class="parallax-container">
-  <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"></div>
-  <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="565"></div>
-  <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="565"></div>
-  <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="565"></div>
-  <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="565"></div>
-  <div class="parallax-layer layer-5" data-parallax-speed="0.9" data-max-scroll="565"></div>
-</div>
+    <header class="intro-header">
+      <div class="container-fluid">
+        <a href="#menu-toggle" class="pull-right" id="menu-toggle">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-bars fa-stack-1x"></i>
+          </span>
+        </a>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="site-heading">
+              <div class="logo-responsive"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<div class="content">
-<section>
-<h2>Blog post</h2>
-<div class="container">
-  <div class="row">
+    <!-- Main Content -->
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    			<div class="row">
+  <div class="media">
   
-    <div class="col-md-4">
-      <div class="item">
-        <img class="pull-left" src="/img/octocat-thumb.jpg" alt="...">
-        <h3>
-          <a href="/blog/2015/02/15/blogging-with-jekyll-part-2/">Blogging with jekyll - Part 2</a>
-        </h3>
-        <p class="post-meta">February 15, 2015</p>
-        <p>As Github users we are all entitled an unlimited number of repositories to hold on our precious code and make it easy to control versions of our builds. Github also enable hosting of static websites which means that a basic bootstrap webpage can be hosted...</p>
-        <p><a href="/blog/2015/02/15/blogging-with-jekyll-part-2/">Read more...</a></p>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="item">
-        <img class="pull-left" src="/img/drjekyll-thumb.jpg" alt="...">
-        <h3>
-          <a href="/blog/2015/02/03/blogging-with-jekyll-part-1/">Blogging with jekyll - Part 1</a>
-        </h3>
-        <p class="post-meta">February 3, 2015</p>
-        <p>Let&#39;s start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain...</p>
-        <p><a href="/blog/2015/02/03/blogging-with-jekyll-part-1/">Read more...</a></p>
-      </div>
-    </div>
-    
+  <div class="col-lg-2 col-md-2">
+      <img class="media-object" src="/img/octocat-thumb.jpg" alt="...">
+  </div>
+  <div class="col-lg-10 col-md-10 post-preview">
+    <a href="/blog/2015/02/15/blogging-with-jekyll-part-2/">
+      <h2 class="media-heading post-title">Blogging with jekyll - Part 2</h2>
+      </h2>
+      
+      <h3 class="post-subtitle">
+          Host your site with github page and configure a custom domain name
+      </h3>
+      
+    </a>
+    <p class="post-meta">February 15, 2015</p>
+  </div>
+  <hr>
+  
+  <div class="col-lg-2 col-md-2">
+      <img class="media-object" src="/img/drjekyll-thumb.jpg" alt="...">
+  </div>
+  <div class="col-lg-10 col-md-10 post-preview">
+    <a href="/blog/2015/02/03/blogging-with-jekyll-part-1/">
+      <h2 class="media-heading post-title">Blogging with jekyll - Part 1</h2>
+      </h2>
+      
+      <h3 class="post-subtitle">
+          Get Jekyll set up and start writing your first post in no time
+      </h3>
+      
+    </a>
+    <p class="post-meta">February 3, 2015</p>
+  </div>
+  <hr>
+  
   </div>
 </div>
-</section>
 
+    		</div>
+    	</div>
+    </div>
 
+    <div class="push"></div>
 
-<script src="/js/parallax.js"></script>
-
-
-
-
-  <!-- Footer -->
+    <!-- /#page-content-wrapper -->
+    <!-- Footer -->
 <footer>
 
     <!-- <ul class="list-inline text-center">
@@ -156,8 +211,10 @@
         </li>
         
     </ul> -->
-    <p class="copyright text-muted ">Powered by <a href="http://www.jekyllrb.com">Jekyll</a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> - Ilustrations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">La Ché</span>
-    <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; display: inline-block;" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"/></a></span></p>
+    <p class="copyright text-muted ">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>
+
+    <!-- <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> - Ilustrations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">La Ché</span>
+    <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; display: inline-block;" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"/></a></span></p> -->
 </footer>
 
 <!-- jQuery -->
@@ -178,6 +235,13 @@
     });
 
     </script>
+
+
+  </div>
+    <!-- /#wrapper -->
+</div>
+
+
 
 
 
