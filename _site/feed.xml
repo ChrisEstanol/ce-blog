@@ -5,12 +5,283 @@
     <description>Christophe Estanol&#39;s website</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 May 2015 19:27:49 -0500</pubDate>
-    <lastBuildDate>Mon, 11 May 2015 19:27:49 -0500</lastBuildDate>
+    <pubDate>Sat, 12 Sep 2015 22:38:45 -0500</pubDate>
+    <lastBuildDate>Sat, 12 Sep 2015 22:38:45 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Blogging with jekyll - Part 2</title>
+        <title>Spree - Custom front end </title>
+        <description>&lt;p&gt;In this post we&amp;#39;ll take a look at making simple changes to the front end of Spree.
+As much as you can you should intent override Spree front end without changing the underlying view files. This will enable you to upgrade to newest version of Spree without headache. However there are situations where a direct override will be a lot easier.&lt;/p&gt;
+
+&lt;h3 id=&quot;customizing-spree-views&quot;&gt;Customizing Spree views&lt;/h3&gt;
+
+&lt;p&gt;Spree use &lt;a href=&quot;https://github.com/spree/deface&quot;&gt;Deface&lt;/a&gt; to make change to the views while keeping future upgrade . &lt;em&gt;Deface is a library that allows you to customize HTML (ERB, Haml and Slim) views in a Rails application without editing the underlying view.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Changing the number of column from 3 to 2 using bootstrap grid classes looks like the following:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Deface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Override&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;virtual_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spree/products/show&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;columns-change-4-to-6&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;set_attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;.col-md-4&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;col-md-6&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or removing the sidebar:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Deface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Override&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:virtual_path&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spree/products/index&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;landing-sidebar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;[data-hook=&amp;quot;homepage_sidebar_navigation&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;responsive-header-nav-bar&quot;&gt;Responsive Header (nav-bar)&lt;/h3&gt;
+
+&lt;p&gt;As we saw we can use deface to transform our header, we can for example:&lt;/p&gt;
+
+&lt;p&gt;remove the search-bar &amp;amp; main-navbar&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Deface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Override&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;virtual_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spree/shared/_nav_bar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     
+        &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;remove-search-bar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      
+        &lt;span class=&quot;ss&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#search-bar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;      
+
+&lt;span class=&quot;no&quot;&gt;Deface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Override&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;virtual_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spree/shared/_main_nav_bar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;remove-main-nav&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        
+        &lt;span class=&quot;ss&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#main-nav-bar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Latest releases of Spree have included &lt;a href=&quot;https://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; for the front end to replace the previous Skeleton framework. The idea was to make upgrades slightly easier using the very popular Bootstrap markup. Spree will benefit from Bootstrap responsive best practices and improve usability and mobile support.
+However Spree basic version doesn&amp;#39;t collapse the nav-bar below 750px. Integrating this functionality with all the different partials and Deface seemed a bit complicated whereas creating the file and overriding it directly would save me a lot of time so I went for this option.&lt;/p&gt;
+
+&lt;p&gt;I just had to create the following file&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;app/views/spree/shared/_header.html.erb&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;spree-header&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;header&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;header&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;navbar navbar-default&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;navigation&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container-fluid&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Brand and toggle get grouped for better mobile display --&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;navbar-header&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;button&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;navbar-toggle&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-toggle=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;collapse&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#bs-example-navbar-collapse-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sr-only&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Toggle navigation&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;icon-bar&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;icon-bar&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;icon-bar&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;logo&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= logo %&amp;gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Collect the nav links, forms, and other content for toggling --&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;collapse navbar-collapse&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bs-example-navbar-collapse-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nav navbar-nav navbar-right&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- if spree_current_user &amp;amp; spree_current_user.is_admin? --&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% if try_spree_current_user.try(:has_spree_role?, &amp;#39;admin&amp;#39;) %&amp;gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;admin-link&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= link_to &amp;#39;Admin&amp;#39;, spree.admin_path %&amp;gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% end %&amp;gt;
+              &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% if spree_current_user %&amp;gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= link_to Spree.t(:my_account), spree.account_path %&amp;gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= link_to Spree.t(:logout), spree.logout_path %&amp;gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% else %&amp;gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;link-to-login&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= link_to Spree.t(:login), spree.login_path %&amp;gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% end %&amp;gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;link-to-cart&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;noscript&amp;gt;&lt;/span&gt;
+                  &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= link_to Spree.t(:cart), &amp;#39;/cart&amp;#39; %&amp;gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;/noscript&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;ni&quot;&gt;&amp;amp;nbsp;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Spree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fetch_cart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.navbar-collapse --&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.container --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
+
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;custom-landing-page&quot;&gt;Custom landing page&lt;/h3&gt;
+
+&lt;p&gt;The way to do it is to create a new file &lt;strong&gt;&lt;em&gt;app/views/layout/landing.html.erb&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 7 ]&amp;gt; &amp;lt;html class=&amp;quot;ie ie6&amp;quot; lang=&amp;quot;&amp;lt;%= I18n.locale %&amp;gt;&amp;quot;&amp;gt; &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 7 ]&amp;gt;    &amp;lt;html class=&amp;quot;ie ie7&amp;quot; lang=&amp;quot;&amp;lt;%= I18n.locale %&amp;gt;&amp;quot;&amp;gt; &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 8 ]&amp;gt;    &amp;lt;html class=&amp;quot;ie ie8&amp;quot; lang=&amp;quot;&amp;lt;%= I18n.locale %&amp;gt;&amp;quot;&amp;gt; &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 9 ]&amp;gt;    &amp;lt;html class=&amp;quot;ie ie9&amp;quot; lang=&amp;quot;&amp;lt;%= I18n.locale %&amp;gt;&amp;quot;&amp;gt; &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if gt IE 9]&amp;gt;&amp;lt;!--&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;%= I18n.locale %&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;inside_head&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= render partial: &amp;#39;spree/shared/head&amp;#39; %&amp;gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;%= body_class %&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;%= @body_id || &amp;#39;default&amp;#39; %&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= render partial: &amp;#39;spree/shared/google_analytics.js&amp;#39; %&amp;gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= render partial: &amp;#39;spree/shared/header&amp;#39; %&amp;gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;content&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= flash_messages %&amp;gt;
+          &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= yield %&amp;gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= yield :templates %&amp;gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= render partial: &amp;#39;footer/footer&amp;#39; %&amp;gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(I have also created a partial for a footer as Spree doesn&amp;#39;t include it in latest releases.)&lt;/p&gt;
+
+&lt;p&gt;And override the &lt;strong&gt;HomeController&lt;/strong&gt; to include &lt;code&gt;layout &amp;#39;landing&amp;#39;&lt;/code&gt;
+&lt;strong&gt;&lt;em&gt;app/controllers/spree/home_controller_decorator.rb&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Spree&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HomeController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Spree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;StoreController&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;landing&amp;#39;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;helper&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spree/products&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:html&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@searcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build_searcher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;include_images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@products&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@searcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retrieve_products&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@taxonomies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Spree&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Taxonomy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You also have to override the landing page with deface:
+&lt;strong&gt;&lt;em&gt;app/overrides/landing.rb&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Deface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Override&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;virtual_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spree/home/index&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;[data-hook=&amp;quot;homepage_products&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;landing-products&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;partial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;home/landing&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;original&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;461aae32b5912b8551fcf3a823427507f434a0cc&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And finally create &lt;strong&gt;&lt;em&gt;app/views/home/_landing.html.erb&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In this example will use bootstrap carousel:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;carousel-landing&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;carousel slide&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-ride=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;carousel&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Indicators --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ol&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;carousel-indicators&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#carousel-landing&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-slide-to=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;active&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#carousel-landing&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-slide-to=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ol&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Wrapper for slides --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;carousel-inner&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;listbox&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;item active&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-7 carousel-img&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-5 carousel-text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Lorem ipsum&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odit eveniet, fugiat inventore quo, exercitationem explicabo voluptas odio, tempore quibusdam dicta repellendus. Soluta corporis, maxime dicta, autem sit praesentium nulla?&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;item&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-7 carousel-img&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-5 carousel-text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Lorem ipsum&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odit eveniet, fugiat inventore quo, exercitationem explicabo voluptas odio, tempore quibusdam dicta repellendus. Soluta corporis, maxime dicta, autem sit praesentium nulla?&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- End slides --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- End wrapper for slides --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- End carousel --&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text-center&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Lorem ipsum&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% if params[:keywords] %&amp;gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;search_results&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% if @products.empty? %&amp;gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;h6&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;search-results-title&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= Spree.t(:no_products_found) %&amp;gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h6&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% else %&amp;gt;
+          &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= render :partial =&amp;gt; &amp;#39;spree/shared/products&amp;#39;, :locals =&amp;gt; { :products =&amp;gt; @products, :taxon =&amp;gt; @taxon } %&amp;gt;
+        &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% end %&amp;gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% else %&amp;gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-hook=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;homepage_products&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% cache(cache_key_for_products) do %&amp;gt;
+          &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;%= render :partial =&amp;gt; &amp;#39;spree/shared/products&amp;#39;, :locals =&amp;gt; { :products =&amp;gt; @products, :taxon =&amp;gt; @taxon } %&amp;gt;
+        &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% end %&amp;gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;% end %&amp;gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;With this simple modifications we can transform Spree front end and&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2015 07:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/blog/2015/07/08/spree-front-end-customisation/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/07/08/spree-front-end-customisation/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Spree - Open Source E-commerce</title>
+        <description>&lt;p&gt;I recently started to work with a startup helping them to build a social network based on emotions. The project if you want to check it out is called &lt;a href=&quot;https://emotionalworld.co/&quot;&gt;emotionalworld&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As part of the natural growth of the platform the founders are exploring new commercial opportunities and one of them is selling physical products based on the cool designs of the page.
+I was asked to review our options and propose a way to prototype and push to production an online store that would integrate with our existing technology.&lt;/p&gt;
+
+&lt;p&gt;In this case the same questions always arise:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Is there an open source project out there that can do the job and has an active community we can learn from?&lt;/li&gt;
+&lt;li&gt;Should we build it from scratch as using an existing project maybe an overkill?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After an extensive benchmark we decided to use an open source e-commerce platform called &lt;a href=&quot;https://github.com/spree/spree&quot;&gt;Spree&lt;/a&gt;. Spree is &amp;quot;complete open source e-commerce solution for Ruby on Rails&amp;quot; and has we are using Rails for emotionalworld backend it made sense to give Spree a go.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-what-about-spree&quot;&gt;So what about Spree?&lt;/h3&gt;
+
+&lt;h4 id=&quot;the-pros&quot;&gt;The pros&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open source&lt;/li&gt;
+&lt;li&gt;It offers a very complete and powerful application for e-commerce out of the box&lt;/li&gt;
+&lt;li&gt;The extensive admin will allow you to handle different tax systems, shipping companies and products specifications out of the box&lt;/li&gt;
+&lt;li&gt;Latest releases have included &lt;a href=&quot;https://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt; for the front end which makes it fairly easy to customize&lt;/li&gt;
+&lt;li&gt;It can be used as backend and API with Javascript or mobile app front end&lt;/li&gt;
+&lt;li&gt;Large community and contribution that have build many extension and gems to extend functionalities&lt;/li&gt;
+&lt;li&gt;If you have experience with Ruby and Rails you are at home&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-cons&quot;&gt;The cons&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It might well be an overkill for a simple online shop&lt;/li&gt;
+&lt;li&gt;Spree has evolved to become a very complete (and complex plateform)&lt;/li&gt;
+&lt;li&gt;The learning curve might be a bit steep if you don&amp;#39;t have much experience with Rails&lt;/li&gt;
+&lt;li&gt;Beside a large quantity of gems to expand functionalities, the community remain small and  it&amp;#39;s not very easy to get answers to your questions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;in-summary&quot;&gt;In summary&lt;/h3&gt;
+
+&lt;p&gt;If you have a few years of Ruby on Rails experience under you belt you should definitely go for SpreeCommerce. The robust platform will provide a strong base to any e-commerce project and you can gradually built on top of it and create an amazing shopping experience. Your client will certainly be impressed with the level of details one can administrate his store. If you are a relatively new to Rails you may be better off to build a shopping cart from scratch and aggregate functionality as your experience grow. And finally if you are sole owner looking for a quick solution you should consider options like &lt;a href=&quot;http://www.woothemes.com/woocommerce/&quot;&gt;Woocommerce&lt;/a&gt; or &lt;a href=&quot;http://www.shopify.com&quot;&gt;Shopify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are opting for Spree for your e-commerce &lt;a href=&quot;https://groups.google.com/forum/#!forum/spree-user&quot;&gt;Spree google user group&lt;/a&gt; as well as &lt;a href=&quot;http://stackoverflow.com/questions/tagged/spree&quot;&gt;stackoverflow&lt;/a&gt; will be handy to come over your main hurdles.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 May 2015 07:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/blog/2015/05/07/why-choosing-spreecommerce/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/05/07/why-choosing-spreecommerce/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll - Hosting and domain</title>
         <description>&lt;p&gt;As Github users we are all entitled an unlimited number of repositories to hold on our precious code and make it easy to control versions of our builds.
 Github also enable hosting of static websites which means that a basic bootstrap webpage can be hosted for free thanks to github. Jekyll, which is also technicaly a static website comes in handy and can also be hosted for free thanks to our friends at github.&lt;/p&gt;
 
@@ -48,9 +319,9 @@ The set up is fairly easy:&lt;/p&gt;
 
 &lt;p&gt;That&amp;#39;s all you need!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 15 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/blog/2015/02/15/blogging-with-jekyll-part-2/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/15/blogging-with-jekyll-part-2/</guid>
+        <pubDate>Sun, 15 Mar 2015 07:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/blog/2015/03/15/jekyll-gh-pages-custom-domain/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/03/15/jekyll-gh-pages-custom-domain/</guid>
         
         
         <category>blog</category>
@@ -58,7 +329,7 @@ The set up is fairly easy:&lt;/p&gt;
       </item>
     
       <item>
-        <title>Blogging with jekyll - Part 1</title>
+        <title>Jekyll - 101</title>
         <description>&lt;p&gt;Let&amp;#39;s start this blog with a bit of inside on how to get started with Jekyll and host it for free with github pages. Jekyll seems like the perfect alternative to a heavier blog engine like wordpress. If you just want to write and maintain your blog in a minimal style worpdress can be overwhelming.&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
@@ -68,7 +339,7 @@ Jekyll has a very comprehensive documentation to get you started in no time. To 
 just run the following &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;commands&lt;/a&gt;.
 The easiest way to start your blog is to fork an existing repository. I had a look around a made a list of the best templates available.&lt;/p&gt;
 
-&lt;h3 id=&quot;here-are-my-top-10-jekyll-themes/repos:&quot;&gt;Here are my top 10 jekyll themes/repos:&lt;/h3&gt;
+&lt;h3 id=&quot;here-are-my-top-10-jekyll-themes-repos&quot;&gt;Here are my top 10 jekyll themes/repos:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://incorporated.sendtoinc.com/&quot;&gt;Jekyll incorporated&lt;/a&gt;&lt;/li&gt;
@@ -87,7 +358,7 @@ The easiest way to start your blog is to fork an existing repository. I had a lo
 
 &lt;p&gt;Once you have chosen a blog template you can run it localy, customize it, write your posts and push everything out to your github repo to be published. I&amp;#39;ll be writing a follow up to this post about the ways to host your blog on github pages and configure your own domain name.&lt;/p&gt;
 
-&lt;h3 id=&quot;jekyll-structure:&quot;&gt;Jekyll structure:&lt;/h3&gt;
+&lt;h3 id=&quot;jekyll-structure&quot;&gt;Jekyll structure:&lt;/h3&gt;
 
 &lt;p&gt;This is the basic Jekyll layout&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;.
@@ -163,11 +434,23 @@ In your _post folder just create a markdown file. Markdown extensions can vary b
 Happy writing everyone!&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 Feb 2015 07:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/blog/2015/02/03/blogging-with-jekyll-part-1/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/03/blogging-with-jekyll-part-1/</guid>
+        <link>http://chrisestanol.com/blog/2015/02/03/jekyll-101/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/blog/2015/02/03/jekyll-101/</guid>
         
         
         <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>SIC2</title>
+        <description></description>
+        <pubDate>Fri, 05 May 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/05/05/sic2/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/05/05/sic2/</guid>
+        
+        
+        <category>work</category>
         
       </item>
     

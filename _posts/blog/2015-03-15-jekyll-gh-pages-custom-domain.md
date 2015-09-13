@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "Blogging with jekyll - Part 2"
+title:      "Jekyll - Hosting and domain"
 subtitle:   "Host your site with github page and configure a custom domain name"
 header-img: "img/octocat.jpg"
 thumb-img:  "img/octocat-thumb.jpg"
-date:       2015-02-15 12:00:00
+date:       2015-03-15 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
