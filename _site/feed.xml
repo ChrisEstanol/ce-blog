@@ -5,8 +5,8 @@
     <description>Christophe Estanol&#39;s website</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Sep 2015 22:38:45 -0500</pubDate>
-    <lastBuildDate>Sat, 12 Sep 2015 22:38:45 -0500</lastBuildDate>
+    <pubDate>Sun, 13 Sep 2015 20:22:25 -0500</pubDate>
+    <lastBuildDate>Sun, 13 Sep 2015 20:22:25 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -267,7 +267,7 @@ I was asked to review our options and propose a way to prototype and push to pro
 
 &lt;h3 id=&quot;in-summary&quot;&gt;In summary&lt;/h3&gt;
 
-&lt;p&gt;If you have a few years of Ruby on Rails experience under you belt you should definitely go for SpreeCommerce. The robust platform will provide a strong base to any e-commerce project and you can gradually built on top of it and create an amazing shopping experience. Your client will certainly be impressed with the level of details one can administrate his store. If you are a relatively new to Rails you may be better off to build a shopping cart from scratch and aggregate functionality as your experience grow. And finally if you are sole owner looking for a quick solution you should consider options like &lt;a href=&quot;http://www.woothemes.com/woocommerce/&quot;&gt;Woocommerce&lt;/a&gt; or &lt;a href=&quot;http://www.shopify.com&quot;&gt;Shopify&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you have a few years of Ruby on Rails experience under you belt you should definitely go for SpreeCommerce. The robust platform will provide a strong base to any e-commerce project and you can gradually built on top of it and create an amazing shopping experience. Your client will certainly be impressed with the level of details which one can administrate his store. If you are relatively new to Rails you may be better off building a shopping cart from scratch and aggregate functionality as your experience grow. And finally if you are sole owner looking for a quick solution you should consider options like &lt;a href=&quot;http://www.woothemes.com/woocommerce/&quot;&gt;Woocommerce&lt;/a&gt; or &lt;a href=&quot;http://www.shopify.com&quot;&gt;Shopify&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you are opting for Spree for your e-commerce &lt;a href=&quot;https://groups.google.com/forum/#!forum/spree-user&quot;&gt;Spree google user group&lt;/a&gt; as well as &lt;a href=&quot;http://stackoverflow.com/questions/tagged/spree&quot;&gt;stackoverflow&lt;/a&gt; will be handy to come over your main hurdles.&lt;/p&gt;
 </description>
