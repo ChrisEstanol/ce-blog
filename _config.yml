@@ -1,6 +1,6 @@
 # Site settings
 title: Christophe Estanol
-email: your-email@yourdomain.com
+email: hi@chrisestanol.com
 description: "Christophe Estanol's website"
 baseurl: ""
 url: "http://chrisestanol.com"
@@ -11,7 +11,7 @@ linkedin_username: chrisestanol
 # Build settings
 markdown: redcarpet
 redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     "with_toc_data"]
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 highlighter: pygments
 permalink: pretty
 paginate: 5

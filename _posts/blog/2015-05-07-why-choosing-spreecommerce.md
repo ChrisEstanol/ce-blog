@@ -32,7 +32,7 @@ After an extensive benchmark we decided to use an open source e-commerce platfor
 
 * Open source
 * It offers a very complete and powerful application for e-commerce out of the box
-* The extensive admin will allow you to handle different tax systems, shipping companies and products specifications out of the box
+* The extensive admin will allow you to handle different tax systems, shipping companies and products specifications
 * Latest releases have included [Bootstrap](https://getbootstrap.com) for the front end which makes it fairly easy to customize
 * It can be used as backend and API with Javascript or mobile app front end
 * Large community and contribution that have build many extension and gems to extend functionalities

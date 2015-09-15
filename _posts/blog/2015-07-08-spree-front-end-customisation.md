@@ -57,7 +57,7 @@ I just had to create the following file
 
  ***app/views/spree/shared/_header.html.erb***
 
-```html
+```rhtml
 <div id="spree-header">
   <header id="header" data-hook>
 
@@ -108,7 +108,7 @@ I just had to create the following file
 
 The way to do it is to create a new file ***app/views/layout/landing.html.erb***
 
-```html
+```rhtml
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
@@ -169,7 +169,7 @@ And finally create ***app/views/home/_landing.html.erb***
 
 In this example will use bootstrap carousel:
 
-```html
+```rhtml
 <div id="carousel-landing" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
