@@ -138,20 +138,8 @@ And override the **HomeController** to include `layout 'landing'`
 ***app/controllers/spree/home_controller_decorator.rb***
 
 ```ruby
- module Spree
-  class HomeController < Spree::StoreController
-
-    layout 'landing'
-
-    helper 'spree/products'
-    respond_to :html
-
-    def index
-      @searcher = build_searcher(params.merge(include_images: true))
-      @products = @searcher.retrieve_products
-      @taxonomies = Spree::Taxonomy.includes(root: :children)
-    end
-  end
+Spree::HomeController.class_eval do
+ layout 'landing'
 end
 ```
 You also have to override the landing page with deface:
