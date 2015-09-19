@@ -2,8 +2,8 @@
 layout:     post
 title:      "Rails - Tagging with autocomplete"
 subtitle:   "How to integrate acts_as_taggable gem with Chosen jQuery library for autocomplete"
-header-img: "img/drjekyll.jpg"
-thumb-img:  "img/drjekyll-thumb.jpg"
+header-img: "img/tag.jpg"
+thumb-img:  "img/tag-thumb.jpg"
 date:       2015-09-15 12:00:00
 author:     "Christophe Estanol"
 share:      True

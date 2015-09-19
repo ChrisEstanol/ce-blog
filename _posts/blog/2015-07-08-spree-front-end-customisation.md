@@ -2,8 +2,8 @@
 layout:     post
 title:      "Spree - Custom front end "
 subtitle:   "How to customize Spree front end and create a new landing page and responsive header"
-header-img: "img/octocat.jpg"
-thumb-img:  "img/octocat-thumb.jpg"
+header-img: "img/spree-custom.jpg"
+thumb-img:  "img/spree-custom-thumb.jpg"
 date:       2015-07-08 12:00:00
 author:     "Christophe Estanol"
 share:      True
