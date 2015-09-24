@@ -7,31 +7,31 @@
 
         <p>Hi, I’m Christophe Estanol and I’m a Ruby on Rails Developer. Learn more about me.
 
-        Have a look around and please don’t hesitate to <a href="mailto:hi@chrisestanol.com?Subject=Hello" target="_top">contact me</a> with any comments, questions, or just to say hello!
+        Have a look around and please don’t hesitate to <a href="mailto:{{ site.author.email }}?Subject=Hello" target="_top">contact me</a> with any comments, questions, or just to say hello!
         </p>
         {% include side-nav.html %}
         <ul class="side-social list-inline text-center">
-          {% if site.twitter_username %}
+          {% if site.author.twitter %}
           <li>
-              <a href="https://twitter.com/{{ site.twitter_username }}">
+              <a href="https://twitter.com/{{ site.author.twitter }}">
                   <span class="fa-stack fa-lg">
                       <i class="fa fa-twitter fa-stack-1x"></i>
                   </span>
               </a>
           </li>
           {% endif %}
-          {% if site.linkedin_username %}
+          {% if site.author.linkedin %}
           <li>
-              <a href="https://co.linkedin.com/in/{{ site.linkedin_username }}">
+              <a href="https://co.linkedin.com/in/{{ site.author.linkedin }}">
                   <span class="fa-stack fa-lg">
                       <i class="fa fa-linkedin fa-stack-1x"></i>
                   </span>
               </a>
           </li>
           {% endif %}
-          {% if site.github_username %}
+          {% if site.author.github %}
           <li>
-              <a href="https://github.com/{{ site.github_username }}">
+              <a href="https://github.com/{{ site.author.github }}">
                   <span class="fa-stack fa-lg">
                       <i class="fa fa-github fa-stack-1x"></i>
                   </span>

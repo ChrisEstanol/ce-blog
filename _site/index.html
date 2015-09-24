@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,30 @@
 
     <link rel="canonical" href="http://chrisestanol.com/">
 
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Blog">
+    <meta property="og:site_name" content="Christophe Estanol">
+    <meta property="og:url" content="http://chrisestanol.com/">
+    <meta property="og:description" content="My latest posts">
+    <meta property="og:image" content="http://chrisestanol.com">
+    <meta property="fb:admins" content="">
+    <meta property="fb:profile_id" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="">
+    
+
+    <!-- Twitter card property -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@chrisestanol">
+    
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/work.css">
-    <link rel="stylesheet" href="/css/parallax.css">
+    <!-- <link rel="stylesheet" href="/css/parallax.css"> -->
     <!-- sidebar -->
     <link rel="stylesheet" href="/css/sidebar.css">
-
     <!-- Pygments Github CSS -->
     <link rel="stylesheet" href="/css/syntax.css">
 
@@ -125,7 +139,7 @@
   <div class="media">
   
   <div class="col-lg-2 col-md-2">
-      <img class="media-object" src="/img/drjekyll-thumb.jpg" alt="...">
+      <img class="media-object" src="/img/tag-thumb.jpg" alt="...">
   </div>
   <div class="col-lg-10 col-md-10 post-preview">
     <a href="/blog/2015/09/15/acts-as-taggable-chosen-plugin/">
@@ -142,7 +156,7 @@
   <hr>
   
   <div class="col-lg-2 col-md-2">
-      <img class="media-object" src="/img/octocat-thumb.jpg" alt="...">
+      <img class="media-object" src="/img/spree-custom-thumb.jpg" alt="...">
   </div>
   <div class="col-lg-10 col-md-10 post-preview">
     <a href="/blog/2015/07/08/spree-front-end-customisation/">
@@ -222,46 +236,7 @@
     <!-- Footer -->
 <footer>
 
-    <!-- <ul class="list-inline text-center">
-        <li>
-            <a href="/feed.xml">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://twitter.com/chrisestanol">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-        </li>
-        
-        
-        <li>
-            <a href="https://co.linkedin.com/in/chrisestanol">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-        </li>
-        
-        
-        <li>
-            <a href="https://github.com/chrisestanol">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-        </li>
-        
-    </ul> -->
+    
     <p class="copyright text-muted ">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>
 
     <!-- <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> - Ilustrations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">La Ché</span>
@@ -286,7 +261,6 @@
     });
 
     </script>
-
 
   </div>
     <!-- /#wrapper -->

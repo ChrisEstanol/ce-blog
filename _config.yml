@@ -1,12 +1,15 @@
 # Site settings
-title: Christophe Estanol
-email: hi@chrisestanol.com
-description: "Christophe Estanol's website"
+name: Christophe Estanol
+description: Christophe Estanol's website
 baseurl: ""
 url: "http://chrisestanol.com"
-twitter_username: chrisestanol
-github_username:  chrisestanol
-linkedin_username: chrisestanol
+author:
+  name: Christophe Estanol
+  email: hi@chrisestanol.com
+  uri: https://twitter.com/chrisestanol
+  twitter: chrisestanol
+  github:  chrisestanol
+  linkedin: chrisestanol
 
 # Build settings
 markdown: redcarpet
