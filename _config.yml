@@ -1,12 +1,16 @@
 # Site settings
-name: Christophe Estanol
-description: Christophe Estanol's website
+title: Christophe Estanol - Ruby on Rails and more...
+description: Christophe Estanol is a Ruby on Rails developer based in Cali, Colombia
 baseurl: ""
 url: "http://chrisestanol.com"
+image: img/logo.png
+locale: en_US
 author:
   name: Christophe Estanol
   email: hi@chrisestanol.com
   uri: https://twitter.com/chrisestanol
+  facebook: christophe.estanol
+  fb_id:
   twitter: chrisestanol
   github:  chrisestanol
   linkedin: chrisestanol
@@ -18,6 +22,5 @@ redcarpet:
 highlighter: pygments
 permalink: pretty
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # permalink: :categories/:title

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <description>Christophe Estanol&#39;s website</description>
+    <title>Christophe Estanol - Ruby on Rails and more...</title>
+    <description>Christophe Estanol is a Ruby on Rails developer based in Cali, Colombia</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 24 Sep 2015 09:27:04 -0500</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2015 09:27:04 -0500</lastBuildDate>
+    <pubDate>Sat, 24 Oct 2015 14:23:08 -0500</pubDate>
+    <lastBuildDate>Sat, 24 Oct 2015 14:23:08 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -152,7 +152,7 @@ At this stage we have built a simple tagging system but let&amp;#39;s improve it
       </item>
     
       <item>
-        <title>Spree - Custom front end </title>
+        <title>Spree - Custom front end</title>
         <description>&lt;p&gt;In this post we&amp;#39;ll take a look at making simple changes to the front end of Spree.
 As much as you can you should intent override Spree front end without changing the underlying view files. This will enable you to upgrade to newest version of Spree without headache. However there are situations where a direct override will be a lot easier.&lt;/p&gt;
 
