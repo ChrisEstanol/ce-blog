@@ -2,13 +2,17 @@
 layout:     post
 title:      "Rails - Tagging with autocomplete"
 subtitle:   "How to integrate acts_as_taggable gem with Chosen jQuery library for autocomplete"
-header-img: "img/tag.jpg"
-thumb-img:  "img/tag-thumb.jpg"
+header-img: "img/post/tag.jpg"
+thumb-img:  "img/post/thumb/tag-thumb.jpg"
 date:       2015-09-15 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
 category:   blog
+sitemap:
+  lastmod: 2015-09-15
+  priority: 0.7
+  changefreq: 'monthly'
 ---
 
 For a project I was recently working on I had to set up a simple tagging system along with autocompletion. The idea was to guide the user towards a pre-defined list of tags that could be easily filtered. Amongst many options I opted for a great gem called [act_as_taggable](https://github.com/mbleigh/acts-as-taggable-on) and the [chosen](https://github.com/harvesthq/chosen) jQuery library.

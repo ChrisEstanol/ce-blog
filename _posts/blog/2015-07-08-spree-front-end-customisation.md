@@ -2,13 +2,17 @@
 layout:     post
 title:      "Spree - Custom front end"
 subtitle:   "How to customize Spree front end and create a new landing page and responsive header"
-header-img: "img/spree-custom.jpg"
-thumb-img:  "img/spree-custom-thumb.jpg"
+header-img: "img/post/spree-custom.jpg"
+thumb-img:  "img/post/thumb/spree-custom-thumb.jpg"
 date:       2015-07-08 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
 category:   blog
+sitemap:
+  lastmod: 2015-07-08
+  priority: 0.7
+  changefreq: 'monthly'
 ---
 
 In this post we'll take a look at making simple changes to the front end of Spree.

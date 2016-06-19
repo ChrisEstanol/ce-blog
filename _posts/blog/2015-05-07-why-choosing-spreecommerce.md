@@ -2,13 +2,17 @@
 layout:     post
 title:      "Spree - Open Source E-commerce"
 subtitle:   "What you need to know before choosing Spree for you e-commerce"
-header-img: "img/spree-why.jpg"
-thumb-img:  "img/spree-why-thumb.jpg"
+header-img: "img/post/spree-why.jpg"
+thumb-img:  "img/post/thumb/spree-why-thumb.jpg"
 date:       2015-05-07 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
 category:   blog
+sitemap:
+  lastmod: 2015-05-07
+  priority: 0.7
+  changefreq: 'monthly'
 ---
 
 I recently started to work with a startup helping them to build a social network based on emotions. The project if you want to check it out is called [emotionalworld](https://emotionalworld.co/)

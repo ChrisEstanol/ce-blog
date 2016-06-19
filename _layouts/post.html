@@ -30,7 +30,7 @@
           {% if page.subtitle %}
           <h2 class="subheading">{{ page.subtitle }}</h2>
           {% endif %}
-          <span class="meta">{{ page.date | date: "%B %-d, %Y" }}</span>
+          <time class="meta">{{ page.date | date: "%B %-d, %Y" }}</time>
           <div class="pull-right">
             {% if page.share != false %}{% include share.html %}{% endif %}
           </div>

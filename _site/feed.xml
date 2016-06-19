@@ -5,9 +5,9 @@
     <description>Christophe Estanol is a Ruby on Rails developer based in Cali, Colombia</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 24 Oct 2015 18:52:17 -0500</pubDate>
-    <lastBuildDate>Sat, 24 Oct 2015 18:52:17 -0500</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Sun, 19 Jun 2016 18:33:35 -0500</pubDate>
+    <lastBuildDate>Sun, 19 Jun 2016 18:33:35 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Rails - Tagging with autocomplete</title>
@@ -573,6 +573,30 @@ Happy writing everyone!&lt;/p&gt;
       </item>
     
       <item>
+        <title>Lean Innovation Group</title>
+        <description></description>
+        <pubDate>Tue, 06 Jun 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/06/06/leaninnovationgroup/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/06/06/leaninnovationgroup/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>EmotionalWorld Store</title>
+        <description></description>
+        <pubDate>Tue, 06 Jun 0000 00:00:00 -0500</pubDate>
+        <link>http://chrisestanol.com/work/0000/06/06/emotionalworld/</link>
+        <guid isPermaLink="true">http://chrisestanol.com/work/0000/06/06/emotionalworld/</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
         <title>SIC2</title>
         <description></description>
         <pubDate>Fri, 05 May 0000 00:00:00 -0500</pubDate>
@@ -602,30 +626,6 @@ Happy writing everyone!&lt;/p&gt;
         <pubDate>Fri, 03 Mar 0000 00:00:00 -0500</pubDate>
         <link>http://chrisestanol.com/work/0000/03/03/ouisi/</link>
         <guid isPermaLink="true">http://chrisestanol.com/work/0000/03/03/ouisi/</guid>
-        
-        
-        <category>work</category>
-        
-      </item>
-    
-      <item>
-        <title>Hernando Tejada</title>
-        <description></description>
-        <pubDate>Wed, 02 Feb 0000 00:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/work/0000/02/02/tejada/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/work/0000/02/02/tejada/</guid>
-        
-        
-        <category>work</category>
-        
-      </item>
-    
-      <item>
-        <title>La Ché</title>
-        <description></description>
-        <pubDate>Sat, 01 Jan 0000 00:00:00 -0500</pubDate>
-        <link>http://chrisestanol.com/work/0000/01/01/lache/</link>
-        <guid isPermaLink="true">http://chrisestanol.com/work/0000/01/01/lache/</guid>
         
         
         <category>work</category>

@@ -1,3 +1,16 @@
+---
+---
+// --------------Globals----------------------------
+@import '../_sass/globals/variables';
+@import '../_sass/globals/syntax';
+
+// --------------Vendors----------------------------
+@import '../_sass/layouts/share';
+@import '../_sass/layouts/sidebar';
+
+// --------------Vendors----------------------------
+@import '../_sass/vendors/bootstrap';
+
 
 /* ============================ Fonts ============================================= */
 
@@ -26,7 +39,7 @@ p {
   margin: 30px 0;
 }
 p a {
-  color: #0085a1;
+  color: $theme-blue;
   text-decoration: none;
   -webkit-transition: color .4s;
   -moz-transition: color .4s;
@@ -37,7 +50,7 @@ p a {
 }
 
 li a {
-  color: #0085a1;
+  color: $theme-blue;
   text-decoration: none;
   -webkit-transition: color .4s;
   -moz-transition: color .4s;
@@ -58,7 +71,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: $theme-blue;
 }
 a img:hover,
 a img:focus {
@@ -80,8 +93,7 @@ blockquote {
  height: 1vmax;
  content: '';
  pointer-events: none;
- opacity: .7;
- background: #0085a1;
+ background: $theme-blue;
  }
 
 /* ========================== Header < 768px ======================================== */
@@ -192,6 +204,18 @@ blockquote {
     color: grey
   }
 }
+/* ========================== Post content ======================================== */
+
+article h3 {
+  font-size: 26px;
+  margin-top: 70px;
+}
+
+article h4 {
+  font-size: 22px;
+  margin-top: 50px;
+}
+
 
 /* ========================== Post preview /index ======================================== */
 
@@ -205,7 +229,7 @@ blockquote {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: $theme-blue;
 }
 .post-preview > a > .post-title {
   font-size: 25px;
@@ -229,7 +253,7 @@ blockquote {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: $theme-blue;
   text-decoration: underline;
 }
 
@@ -247,12 +271,12 @@ blockquote {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: $theme-blue;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: $theme-blue;
 }
 img::selection {
   color: white;
@@ -263,7 +287,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #0085a1;
+  webkit-tap-highlight-color: $theme-blue;
 }
 
 /* ========================== Work page ======================================== */

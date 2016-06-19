@@ -2,13 +2,17 @@
 layout:     post
 title:      "Jekyll - Hosting and domain"
 subtitle:   "Host your site with github page and configure a custom domain name"
-header-img: "img/octocat.jpg"
-thumb-img:  "img/octocat-thumb.jpg"
+header-img: "img/post/octocat.jpg"
+thumb-img:  "img/post/thumb/octocat-thumb.jpg"
 date:       2015-03-15 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
 category:   blog
+sitemap:
+  lastmod: 2015-03-15
+  priority: 0.7
+  changefreq: 'monthly'
 ---
 
 As Github users we are all entitled an unlimited number of repositories to hold on our precious code and make it easy to control versions of our builds.
