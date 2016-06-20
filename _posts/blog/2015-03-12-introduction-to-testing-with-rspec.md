@@ -34,7 +34,7 @@ There are 2 main testing framework when working Ruby or Rails code:
 * **[RSpec](https://github.com/seattlerb/minitest)**
  is a "Behaviour Driven Development for Ruby. Making TDD Productive and Fun". Well I couldn't agree more with the RSpec catch phrase. This framework is trying to solve something important about testing: **It should be more about your code than the test itself**.
 
- Some developer would also argue that you shouldn't be introducing a new language to test and you should be making your test using pure Ruby. I find that RSpec syntax is not difficult to learn and make your tests more maintainable. Anybody that doesn't know your app can understand what it `should` `expect` from your code. But don't just take my word for it and check out what;s feel more natural to you.
+ Some developer would also argue that you shouldn't be introducing a new language to test and you should be making your test using pure Ruby. I find that RSpec syntax is not difficult to learn and make your tests more maintainable. Anybody that doesn't know your app can understand what it `should` `expect` from your code. But don't just take my word for it and check out what feels more natural to you.
 
 ### Setting up RSpec
 
