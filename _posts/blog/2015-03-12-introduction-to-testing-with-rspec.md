@@ -27,7 +27,7 @@ I won't be getting into too much details about the app itself and we would be fo
 
 Becoming a better developer will inevitably involve TDD (Test Driven Development) and any experienced Rails developer will heavily rely on testing to create and maintain error free code base. Testing as always been a part of coding but the Ruby community has embraced Automatic testing like any other. Testing establish additional trust when pushing your code to a team based project. It's simply about accountability. Also if you want to contribute to open source as some point you will need to provide your own tests.
 
-There are 2 main testing framework when working Ruby or Rails code:
+There are 2 main testing frameworks when working Ruby or Rails code:
 
 * **[Minitest](https://github.com/seattlerb/minitest)**
  comes packaged with Ruby itself and provide a quick way to `assert` that your code won't fail. You can learn a lot about Minitest while reading Micahel Hartl [Rails tutorial](https://www.railstutorial.org/book).
