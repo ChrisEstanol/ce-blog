@@ -350,7 +350,7 @@ describe Country do
 end
 ```
 
-You can take a look at the [sample app](http) on github to see how to refactor the **city_spec.rb**. Again it doesn't really change much from the country model you just need to assess the presence of the ActiveRecord `belongs_to` association.
+You can take a look at the [example app](https://github.com/ChrisEstanol/ajax_nested_table) on github to see how to refactor the **city_spec.rb**. Again it doesn't really change much from the country model you just need to assess the presence of the ActiveRecord `belongs_to` association.
 
 ```ruby
 describe City do
