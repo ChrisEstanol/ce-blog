@@ -1,20 +1,29 @@
 ---
 layout:     post
-title:      "Rails - Introduction to testing with Rspec"
-subtitle:   "TDD with Ajax nested tables (Rspec, Capybara, Selenium & Factorygirl)"
-header-img: "img/tag.jpg"
-thumb-img:  "img/tag-thumb.jpg"
-date:       2015-10-12 12:00:00
+title:      "Rails - Introduction to testing with RSpec"
+subtitle:   "Implementing TDD with Ajax nested tables (RSpec, Capybara, Selenium & Factorygirl)"
+header-img: "img//post/test.jpg"
+thumb-img:  "img/post/thumb/test-thumb.jpg"
+date:       2016-03-12 12:00:00
 author:     "Christophe Estanol"
 share:      True
 comments:   True
 category:   blog
+sitemap:
+  lastmod: 2016-06-19
+  priority: 0.7
+  changefreq: 'monthly'
 ---
 
-In this post we'll look into creating a simple application with nested tables. Nested tables allow to display additional information for nested sets of data (also known as trees or hierarchies) for relational databases. You could also apply this to any hierarchy based data format like MongoDB or simple JSON.
+In this post we'll look into creating a simple application with nested table. Nested tables allow to display additional information for nested sets of data (also known as trees or hierarchies) for relational databases. You could also apply this to any hierarchy based data format like MongoDB or simple JSON.
 For this example we'll be showing the population of some european countries and cities to show the model relation `country has_many :cities`.
 This type of functionality is inspired from the popular Jquery plugin [Data table](https://datatables.net/examples/api/row_details.html).
-We'll set up and use RSpec for our testing need.
+
+<img src="{{ site.baseurl }}/img/post/ajax-nested-table.gif" alt="Ajax nested table">
+
+We'll set up and use RSpec for testing.
+
+I won't be getting into too much details about the app itself and we would be focusing on the test coverage. If you want to have a look at the complete app you can check out the [repository on github](https://github.com/ChrisEstanol/ant).
 
 ### Why bothering with testing?
 

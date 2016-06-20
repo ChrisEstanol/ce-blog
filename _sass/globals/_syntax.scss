@@ -5,6 +5,7 @@ code, kbd, pre, samp {
 font-size: 0.7em;
 border: none;
 border-radius: 0;
+
 }
 
 .highlight pre code * {
@@ -13,8 +14,9 @@ border-radius: 0;
 
 .highlight pre {
   color: #616161;
-  border-left: .33em solid #4CA8BC;
+  border-left: .33em solid $theme-blue;
   background-color: #f6f6f6;
+  border-radius: 0;
 }
 
 .highlight pre code {
