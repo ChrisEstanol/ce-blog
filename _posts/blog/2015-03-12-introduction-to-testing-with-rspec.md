@@ -21,7 +21,7 @@ This type of functionality is inspired from the popular Jquery plugin [Data tabl
 
 <img src="{{ site.baseurl }}/img/post/ajax-nested-table.gif" alt="Ajax nested table">
 
-I won't be getting into too much details about the app itself and we would be focusing on the test coverage. If you want to have a look at the complete app you can check out the [repository on github](https://github.com/ChrisEstanol/ant).
+I won't be getting into too much details about the app itself and we would be focusing instead on the test coverage. If you want to have a look at the complete app you can check out the [repository on github](https://github.com/ChrisEstanol/ant). I have also added a set of seed data to make it more convenient. So if you run rake db:seed you will populate the db with some countries and cities.
 
 ### Why bothering with testing?
 
@@ -34,13 +34,13 @@ There are 2 main testing framework when working Ruby or Rails code:
 * **[RSpec](https://github.com/seattlerb/minitest)**
  is a "Behaviour Driven Development for Ruby. Making TDD Productive and Fun". Well I couldn't agree more with the RSpec catch phrase. This framework is trying to solve something important about testing: **It should be more about your code than the test itself**.
 
- Some developer would also argue that you shouldn't be introducing a new language to test and you should be making your test using pure Ruby. I find that RSpec syntax is not difficult to learn and make your tests more maintainable. Anybody that doesn't know your app can understand what it `should` `expect` from your code.
+ Some developer would also argue that you shouldn't be introducing a new language to test and you should be making your test using pure Ruby. I find that RSpec syntax is not difficult to learn and make your tests more maintainable. Anybody that doesn't know your app can understand what it `should` `expect` from your code. But don't just take my word for it and check out what;s feel more natural to you.
 
 ### Setting up RSpec
 
 I have been reading [Everyday Rails Testing with RSpec](https://leanpub.com/everydayrailsrspec) and found it provides a clear and concise introduction to RSpec so you might recognize the set up.
 
-First thing first our new application:
+First thing first, our new application:
 
 ```bash
 rails new ajax_nested_table -T

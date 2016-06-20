@@ -5,8 +5,8 @@
     <description>Christophe Estanol is a Ruby on Rails developer based in Cali, Colombia</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Jun 2016 19:25:57 -0500</pubDate>
-    <lastBuildDate>Sun, 19 Jun 2016 19:25:57 -0500</lastBuildDate>
+    <pubDate>Sun, 19 Jun 2016 19:49:19 -0500</pubDate>
+    <lastBuildDate>Sun, 19 Jun 2016 19:49:19 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -17,7 +17,7 @@ This type of functionality is inspired from the popular Jquery plugin &lt;a href
 
 &lt;p&gt;&lt;img src=&quot;/img/post/ajax-nested-table.gif&quot; alt=&quot;Ajax nested table&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;I won&amp;#39;t be getting into too much details about the app itself and we would be focusing on the test coverage. If you want to have a look at the complete app you can check out the &lt;a href=&quot;https://github.com/ChrisEstanol/ant&quot;&gt;repository on github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I won&amp;#39;t be getting into too much details about the app itself and we would be focusing instead on the test coverage. If you want to have a look at the complete app you can check out the &lt;a href=&quot;https://github.com/ChrisEstanol/ant&quot;&gt;repository on github&lt;/a&gt;. I have also added a set of seed data to make it more convenient. So if you run rake db:seed you will populate the db with some countries and cities.&lt;/p&gt;
 
 &lt;h3 id=&quot;why-bothering-with-testing&quot;&gt;Why bothering with testing?&lt;/h3&gt;
 
@@ -32,13 +32,13 @@ comes packaged with Ruby itself and provide a quick way to &lt;code&gt;assert&lt
 is a &amp;quot;Behaviour Driven Development for Ruby. Making TDD Productive and Fun&amp;quot;. Well I couldn&amp;#39;t agree more with the RSpec catch phrase. This framework is trying to solve something important about testing: &lt;strong&gt;It should be more about your code than the test itself&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Some developer would also argue that you shouldn&amp;#39;t be introducing a new language to test and you should be making your test using pure Ruby. I find that RSpec syntax is not difficult to learn and make your tests more maintainable. Anybody that doesn&amp;#39;t know your app can understand what it &lt;code&gt;should&lt;/code&gt; &lt;code&gt;expect&lt;/code&gt; from your code.&lt;/p&gt;
+&lt;p&gt;Some developer would also argue that you shouldn&amp;#39;t be introducing a new language to test and you should be making your test using pure Ruby. I find that RSpec syntax is not difficult to learn and make your tests more maintainable. Anybody that doesn&amp;#39;t know your app can understand what it &lt;code&gt;should&lt;/code&gt; &lt;code&gt;expect&lt;/code&gt; from your code. But don&amp;#39;t just take my word for it and check out what;s feel more natural to you.&lt;/p&gt;
 
 &lt;h3 id=&quot;setting-up-rspec&quot;&gt;Setting up RSpec&lt;/h3&gt;
 
 &lt;p&gt;I have been reading &lt;a href=&quot;https://leanpub.com/everydayrailsrspec&quot;&gt;Everyday Rails Testing with RSpec&lt;/a&gt; and found it provides a clear and concise introduction to RSpec so you might recognize the set up.&lt;/p&gt;
 
-&lt;p&gt;First thing first our new application:&lt;/p&gt;
+&lt;p&gt;First thing first, our new application:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rails new ajax_nested_table -T
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;-T&lt;/strong&gt; will omit all the test framework as we are using RSpec.&lt;/p&gt;
