@@ -31,7 +31,7 @@ There are two ways to host your webpage with [Github](https://pages.github.com/)
 * For User pages you need to name you repository ``<username>.github.io`` for github to publish it as your web page. For project pages you can give it the name you like.
 * User/Organisations page will remain on the master branch whereas Project pages will need to be pushed on a special branch named ``gh-pages``. You will then need to set up gh-pages as your default page.
 
-<img src="{{ site.baseurl }}/img/gh-pages.png" alt="gh-pages branch">
+<img src="{{ site.baseurl }}/img/post/gh-pages.png" alt="gh-pages branch">
 
 You can get more info about the different hosting modes on [github help](https://help.github.com/articles/user-organization-and-project-pages/) page.
 
@@ -44,6 +44,6 @@ The set up is fairly easy:
 2. Set up your [DNS](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/)
 
 Here is an example of my DNS settings with Cloudflare
-<img src="{{ site.baseurl }}/img/cloudflare.png" alt="gh-pages branch">
+<img src="{{ site.baseurl }}/img/post/cloudflare.png" alt="gh-pages branch">
 
 That's all you need!

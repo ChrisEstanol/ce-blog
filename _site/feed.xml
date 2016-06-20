@@ -5,8 +5,8 @@
     <description>Christophe Estanol is a Ruby on Rails developer based in Cali, Colombia</description>
     <link>http://chrisestanol.com/</link>
     <atom:link href="http://chrisestanol.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Jun 2016 19:57:27 -0500</pubDate>
-    <lastBuildDate>Sun, 19 Jun 2016 19:57:27 -0500</lastBuildDate>
+    <pubDate>Sun, 19 Jun 2016 21:57:58 -0500</pubDate>
+    <lastBuildDate>Sun, 19 Jun 2016 21:57:58 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -23,7 +23,7 @@ This type of functionality is inspired from the popular Jquery plugin &lt;a href
 
 &lt;p&gt;Becoming a better developer will inevitably involve TDD (Test Driven Development) and any experienced Rails developer will heavily rely on testing to create and maintain error free code base. Testing as always been a part of coding but the Ruby community has embraced Automatic testing like any other. Testing establish additional trust when pushing your code to a team based project. It&amp;#39;s simply about accountability. Also if you want to contribute to open source as some point you will need to provide your own tests.&lt;/p&gt;
 
-&lt;p&gt;There are 2 main testing frameworks when working Ruby or Rails code:&lt;/p&gt;
+&lt;p&gt;There are 2 main testing frameworks when working with Ruby or Rails code:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/seattlerb/minitest&quot;&gt;Minitest&lt;/a&gt;&lt;/strong&gt;
@@ -132,7 +132,7 @@ rails g model City name:string population:integer country:references
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;ANd if we run &lt;code&gt;rspec&lt;/code&gt; in our terminal the result is obviously a series of failed examples and one pending (our city spec that was created when running rails generator).&lt;/p&gt;
+&lt;p&gt;And if we run &lt;code&gt;rspec&lt;/code&gt; in our terminal the result is obviously a series of failed examples and one pending (our city spec that was created when running rails generator).&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Finished in 0.01149 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 2.92 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt; examples, &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; failures, &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; pending
 
@@ -1120,7 +1120,7 @@ Github also enable hosting of static websites which means that a basic bootstrap
 &lt;li&gt;User/Organisations page will remain on the master branch whereas Project pages will need to be pushed on a special branch named &lt;code&gt;gh-pages&lt;/code&gt;. You will then need to set up gh-pages as your default page.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/gh-pages.png&quot; alt=&quot;gh-pages branch&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/gh-pages.png&quot; alt=&quot;gh-pages branch&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;You can get more info about the different hosting modes on &lt;a href=&quot;https://help.github.com/articles/user-organization-and-project-pages/&quot;&gt;github help&lt;/a&gt; page.&lt;/p&gt;
 
@@ -1135,7 +1135,7 @@ The set up is fairly easy:&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Here is an example of my DNS settings with Cloudflare
-&lt;img src=&quot;/img/cloudflare.png&quot; alt=&quot;gh-pages branch&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;/img/post/cloudflare.png&quot; alt=&quot;gh-pages branch&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;That&amp;#39;s all you need!&lt;/p&gt;
 </description>
