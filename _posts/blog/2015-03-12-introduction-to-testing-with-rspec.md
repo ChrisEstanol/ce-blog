@@ -21,8 +21,6 @@ This type of functionality is inspired from the popular Jquery plugin [Data tabl
 
 <img src="{{ site.baseurl }}/img/post/ajax-nested-table.gif" alt="Ajax nested table">
 
-We'll set up and use RSpec for testing.
-
 I won't be getting into too much details about the app itself and we would be focusing on the test coverage. If you want to have a look at the complete app you can check out the [repository on github](https://github.com/ChrisEstanol/ant).
 
 ### Why bothering with testing?
@@ -678,7 +676,7 @@ end
 
 ### Testing with Javascript
 
-We need a bit of tweecking in order to test our Ajax request and how we dynamicaly populate part of our tables. As you remember the whole purpose of this application is to fetch cities associated to a country through Ajax.
+We need to implement some changes in order to test our Ajax request and how we dynamically populate part of our tables. As you remember the whole purpose of this application is to fetch cities associated to a country through Ajax.
 If your application or front-end rely heavily on Javascript you might need to use a specific testing framework like [Mocha or Jasmine](http://thejsguy.com/2015/01/12/jasmine-vs-mocha-chai-and-sinon.html) but in our case [Selenium web-driver](http://www.rubydoc.info/github/jnicklas/capybara/master#Selenium) will be just fine.
 Although Capybara’s default `Rack::Test` driver does not support JavaScript, it bundles support for the Selenium web driver out of the box. With Selenium, you can simulate more complex web interactions, including JavaScript. Selenium makes this possible by running your test code through a lightweight web server, and automating the browser’s interactions with that server.
 As you'll see when running your test it starts Firefox and run the Javascript interaction.
